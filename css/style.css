@@ -1,0 +1,872 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+header {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: url('../img/spavos-header.jfif');
+    background-size: cover;
+    background-position: center;
+    color: gold;
+    border-bottom: 2px solid #FFA500;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 0;
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+    z-index: 2;
+    position: relative;
+}
+
+.header h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    font-size: 2.5em;
+    color: gold;
+}
+
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    margin: 0 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    color: gold;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+.background-section {
+    background-image: url('../img/spa-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.text-background {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.background-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    margin: 20px 0 10px;
+    color: #FFFFFF;
+}
+
+.background-section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    margin: 0 20px;
+    color: #FFFFFF;
+}
+
+.contact-button {
+    background-color: #25D366;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.tags-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.tag {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.tag img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.tag h3 {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.new-products-section {
+    width: 100%;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.products-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-height: 300px;
+}
+
+.text-background {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px;
+    z-index: 1;
+}
+
+.new-products-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    color: #FFFFFF;
+}
+
+
+footer {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    background-color: black;
+    border-top: 4px solid gold;
+    border-bottom: 4px solid gold;
+}
+
+
+.map-links {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.map-item {
+    width: 30%;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.map-item p {
+    margin-top: 5px;
+    font-size: 1em;
+    color: white;
+}
+
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-item {
+    text-align: center;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.social-item p {
+    color: white;
+    font-size: 1.1em;
+    margin: 5px 0 0;
+}
+
+.logo-item {
+    width: 100px;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+.logo-item:first-child {
+    margin-left: 0;
+}
+
+.logo-item:last-child {
+    margin-right: 0;
+    align-self: flex-end;
+}
+
+
+#whatsapp {
+    display: inline-block;
+    margin: 0 10px;
+    width: 50px;
+}
+
+
+/* ** Media Queries para responsive (941px a 360px)** */
+
+@media screen and (max-width: 941px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        font-size: 1em;
+        margin: 0 10px;
+    }
+
+    .background-section h2 {
+        font-size: 2em;
+    }
+
+    .background-section p {
+        font-size: 1em;
+    }
+
+    .contact-button {
+        font-size: 1em;
+    }
+
+    .tags-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .map-item {
+        width: 80%;
+    }
+
+    .social-media {
+        flex-direction: column;
+    }
+
+    .logo-item {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .background-section h2 {
+        font-size: 1.8em;
+    }
+
+    .contact-button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    .tags-section {
+        margin: 20px 0;
+    }
+
+    .tag img {
+        max-width: 300px;
+    }
+
+    .new-products-section h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    nav a {
+        font-size: 0.9em;
+        margin: 0 5px;
+    }
+
+    .background-section h2 {
+        font-size: 1.5em;
+    }
+
+    .background-section p {
+        font-size: 0.9em;
+    }
+
+    .tags-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tag img {
+        max-width: 250px;
+    }
+
+    .products-image {
+        max-height: 250px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+
+.logos {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.logos img {
+    width: 150px;
+    margin: 0 20px;
+    transition: width 0.3s ease;
+}
+
+
+.contact-form-section {
+    padding: 40px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    color: white;
+}
+
+.contact-form-section p {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1em;
+}
+
+
+
+.contact-form-section label {
+    display: block;
+    margin: 15px 0 5px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: black;
+    background-color: #fff;
+}
+
+
+.contact-form-section input:focus,
+.contact-form-section textarea:focus {
+    border-color: goldenrod;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+
+
+.contact-form-section button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: goldenrod;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form-section button:hover {
+    background-color: darkgoldenrod;
+}
+
+
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+    gap: 15px;
+}
+
+
+
+/* Responsive para pantallas entre 941px y 360px */
+
+@media (max-width: 941px) and (min-width: 361px) {
+    .logos img {
+        width: 120px;
+    }
+
+    .contact-form-section {
+        padding: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form-section h2 {
+        font-size: 1.5em;
+    }
+
+    .contact-form-section p {
+        font-size: 0.9em;
+    }
+
+    .contact-form-section label {
+        font-size: 0.9em;
+    }
+
+    .contact-form-section input,
+    .contact-form-section textarea {
+        font-size: 0.9em;
+    }
+
+    .contact-form-section button {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .logos img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logos img {
+        width: 80px;
+    }
+
+    .contact-form-section h2 {
+        font-size: 1.2em;
+    }
+
+    .contact-form-section p {
+        font-size: 0.8em;
+    }
+
+    .contact-form-section input,
+    .contact-form-section textarea {
+        font-size: 0.8em;
+    }
+
+    .contact-form-section button {
+        font-size: 0.8em;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .logos img {
+        width: 70px;
+    }
+
+    .contact-form-section h2 {
+        font-size: 1.1em;
+    }
+
+    .contact-form-section p {
+        font-size: 0.75em;
+    }
+
+    .contact-form-section input,
+    .contact-form-section textarea {
+        font-size: 0.75em;
+    }
+
+    .contact-form-section button {
+        font-size: 0.75em;
+        padding: 8px 12px;
+    }
+
+}
+
+
+.us-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;/
+}
+
+
+.us-section img.logo {
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
+}
+
+
+.us-section p {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1.3em;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.team-section {
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-image {
+    background-image: url('../img/spa-vos.nosotros2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-text {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+.background-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    margin: 0;
+}
+
+
+/* Media Queries para diseño responsive */
+@media (max-width: 941px) {
+    .us-section h2 {
+        font-size: 1.8em;
+    }
+
+    .us-section p {
+        font-size: 20px;
+    }
+
+    .background-text h2 {
+        font-size: 1.6em;
+    }
+
+    .background-image {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .us-section h2 {
+        font-size: 1.6em;
+    }
+
+    .us-section p {
+        font-size: 18px;
+    }
+
+    .background-image {
+        height: 300px;
+    }
+
+    .background-text h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    .us-section h2 {
+        font-size: 1.4em;
+    }
+
+    .us-section p {
+        font-size: 16px;
+    }
+
+    .background-image {
+        height: 250px;
+    }
+
+    .background-text h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .us-section h2 {
+        font-size: 1.2em;
+    }
+
+    .us-section p {
+        font-size: 14px;
+    }
+
+    .background-image {
+        height: 220px;
+    }
+
+    .background-text h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 360px) {
+    .us-section h2 {
+        font-size: 1.1em;
+    }
+
+    .us-section p {
+        font-size: 13px;
+    }
+
+    .background-image {
+        height: 200px;
+    }
+
+    .background-text h2 {
+        font-size: 1em;
+    }
+}
+
+
+
+
+.products-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.productsimage-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.products-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.products-section p {
+    font-family: 'Roboto', 'Lora', sans-serif;
+    margin-bottom: 1.3em;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+
+.productsimage-section .tag img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Ajuste para pantallas medianas (de 940px a 767px) */
+@media (max-width: 940px) {
+    .productsimage-section {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 15px;
+    }
+
+    .products-section h2 {
+        font-size: 2em;
+    }
+
+    .products-section p {
+        font-size: 20px;
+    }
+}
+
+/* Ajuste para pantallas pequeñas (de 766px a 481px) */
+@media (max-width: 766px) {
+    .productsimage-section {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
+    }
+
+    .products-section h2 {
+        font-size: 1.8em;
+    }
+
+    .products-section p {
+        font-size: 18px;
+    }
+}
+
+/* Ajuste para pantallas muy pequeñas (de 480px a 361px) */
+@media (max-width: 480px) {
+    .productsimage-section {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .products-section h2 {
+        font-size: 1.6em;
+    }
+
+    .products-section p {
+        font-size: 16px;
+    }
+}
+
+
+
+main {
+    background-color: #121212;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+section.text-center h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+
+section.text-center p {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+
+
+
+.tag img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media screen and (max-width: 941px) {
+    .row {
+        display: block;
+    }
+
+    .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    section.text-center h2 {
+        font-size: 2em;
+    }
+
+    section.text-center p {
+        font-size: 16px;
+    }
+}
