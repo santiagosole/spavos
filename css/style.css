@@ -177,8 +177,8 @@ main {
     color: #FFFFFF;
 }
 
-
-footer {
+/* Selector principal encapsulado */
+footer.site-footer {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     padding: 20px;
@@ -187,80 +187,134 @@ footer {
     border-bottom: 4px solid gold;
 }
 
-
-.map-links {
+footer.site-footer .footer-map-links {
     display: flex;
     justify-content: space-around;
     gap: 20px;
+    flex-wrap: wrap; /* Permite que las columnas se adapten en líneas nuevas */
 }
 
-.map-item {
+footer.site-footer .footer-map-item {
     width: 30%;
     text-align: center;
     margin: 0 10px;
 }
 
-.map-item p {
+footer.site-footer .footer-map-item iframe {
+    width: 100%; /* Ocupa el 100% del contenedor */
+    height: 200px; /* Altura proporcional */
+}
+
+footer.site-footer .footer-map-item p {
     margin-top: 5px;
     font-size: 1em;
     color: white;
 }
 
-
-.social-media {
+footer.site-footer .footer-social-media {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
     padding: 0 20px;
+    flex-wrap: wrap; /* Reorganiza los elementos en pantallas pequeñas */
 }
 
-.social-links {
+footer.site-footer .footer-social-links {
     display: flex;
     align-items: center;
     gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-.social-item {
+footer.site-footer .footer-social-item {
     text-align: center;
 }
 
-.social-icon {
+footer.site-footer .footer-social-icon {
     width: 30px;
     height: 30px;
     vertical-align: middle;
 }
 
-.social-item p {
+footer.site-footer .footer-social-item p {
     color: white;
     font-size: 1.1em;
     margin: 5px 0 0;
 }
 
-.logo-item {
+footer.site-footer .footer-logo-item {
     width: 100px;
+    margin: 10px 0;
 }
 
-.footer-logo {
+footer.site-footer .footer-logo {
     width: 100px;
     height: auto;
 }
 
-.logo-item:first-child {
-    margin-left: 0;
-}
-
-.logo-item:last-child {
-    margin-right: 0;
-    align-self: flex-end;
-}
-
-
-#whatsapp {
+footer.site-footer #footer-whatsapp {
     display: inline-block;
-    margin: 0 10px;
+    margin: 10px 10px 0;
     width: 50px;
 }
+
+/* Media Queries para pantallas de 941px a 360px */
+@media (max-width: 941px) {
+    footer.site-footer .footer-map-links {
+        flex-direction: column; /* Reorganiza en una columna */
+        gap: 20px;
+    }
+
+    footer.site-footer .footer-map-item {
+        width: 90%; /* Ocupa casi todo el ancho */
+        margin: 0 auto; /* Centra los elementos */
+    }
+
+    footer.site-footer .footer-map-item iframe {
+        height: 250px; /* Altura mayor en pantallas pequeñas */
+    }
+
+    footer.site-footer .footer-social-media {
+        flex-direction: column; /* Reorganiza elementos verticalmente */
+        text-align: center;
+    }
+
+    footer.site-footer .footer-social-links {
+        flex-direction: column;
+        gap: 10px; /* Espaciado entre enlaces */
+    }
+
+    footer.site-footer .footer-logo-item {
+        width: 80px; /* Ajusta el tamaño del logo */
+    }
+
+    footer.site-footer #footer-whatsapp {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer.site-footer .footer-map-item iframe {
+        height: 200px; /* Reduce altura aún más */
+    }
+
+    footer.site-footer .footer-logo {
+        width: 80px; /* Reduce el tamaño del logo */
+    }
+
+    footer.site-footer .footer-social-icon {
+        width: 25px; /* Iconos más pequeños */
+        height: 25px;
+    }
+
+    footer.site-footer .footer-social-item p {
+        font-size: 1em; /* Texto más pequeño */
+    }
+}
+
+
 
 
 /* ** Media Queries para responsive (941px a 360px)** */
@@ -291,23 +345,7 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-
-    .map-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .map-item {
-        width: 80%;
-    }
-
-    .social-media {
-        flex-direction: column;
-    }
-
-    .logo-item {
-        width: 80px;
-    }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -364,14 +402,6 @@ footer {
         max-height: 250px;
     }
 
-    footer {
-        padding: 10px;
-    }
-
-    .social-icon {
-        width: 25px;
-        height: 25px;
-    }
 }
 
 
