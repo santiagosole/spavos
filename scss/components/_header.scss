@@ -1,0 +1,52 @@
+// header.scss
+
+header {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: url('../img/spavos-header.jfif');
+    background-size: cover;
+    background-position: center;
+    color: $gold;
+    border-bottom: 2px solid $gold;
+    position: relative;
+    font-family: $font-raleway;
+    margin-bottom: 0;
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: $logo-max-width;
+    z-index: 2;
+    position: relative;
+}
+
+.header h1 {
+    margin: 0;
+    font-family: $font-montserrat;
+    padding: 10px;
+    font-size: $header-font-size;
+    color: $gold;
+}
+
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    font-family: $font-montserrat;
+    display: inline-block;
+    margin: 0 20px;
+    text-decoration: none;
+    color: $white;
+    font-weight: bold;
+    font-size: $nav-font-size;
+}
+
+nav a:hover {
+    color: $gold;
+    cursor: pointer;
+}

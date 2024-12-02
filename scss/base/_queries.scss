@@ -1,0 +1,138 @@
+/* Media Queries generales para responsive */
+@media (max-width: 941px) {
+    // Footer: reorganiza elementos para pantallas pequeñas
+    footer.site-footer .footer-map-links {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    footer.site-footer .footer-map-item {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    footer.site-footer .footer-map-item iframe {
+      height: 250px;
+    }
+  
+    footer.site-footer .footer-social-media {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    footer.site-footer .footer-social-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    footer.site-footer .footer-logo-item {
+      width: 80px;
+    }
+  
+    footer.site-footer #footer-whatsapp {
+      margin-top: 15px;
+    }
+  
+    // Header y navegación
+    header h1 {
+      font-size: 2em;
+    }
+  
+    nav a {
+      font-size: 1em;
+      margin: 0 10px;
+    }
+  
+    .background-section h2 {
+      font-size: 2em;
+    }
+  
+    .background-section p {
+      font-size: 1em;
+    }
+  
+    .contact-button {
+      font-size: 1em;
+    }
+  
+    .tags-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    // Ajustes en la sección de fondo
+    .background-section h2 {
+      font-size: 1.8em;
+    }
+  
+    .contact-button {
+      font-size: 1em;
+      padding: 8px 16px;
+    }
+  
+    .tags-section {
+      margin: 20px 0;
+    }
+  
+    .tag img {
+      max-width: 300px;
+    }
+  
+    .new-products-section h2 {
+      font-size: 1.5em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    // Header y navegación
+    header h1 {
+      font-size: 1.6em;
+    }
+  
+    nav a {
+      font-size: 0.9em;
+      margin: 0 5px;
+    }
+  
+    .background-section h2 {
+      font-size: 1.5em;
+    }
+  
+    .background-section p {
+      font-size: 0.9em;
+    }
+  
+    .tags-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .tag img {
+      max-width: 250px;
+    }
+  
+    .products-image {
+      max-height: 250px;
+    }
+  
+    // Footer: ajustes de tamaño y estilo
+    footer.site-footer .footer-map-item iframe {
+      height: 200px;
+    }
+  
+    footer.site-footer .footer-logo {
+      width: 80px;
+    }
+  
+    footer.site-footer .footer-social-icon {
+      width: 25px;
+      height: 25px;
+    }
+  
+    footer.site-footer .footer-social-item p {
+      font-size: 1em;
+    }
+  }
+  
