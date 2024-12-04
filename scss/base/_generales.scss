@@ -1,45 +1,15 @@
-// generales.scss
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: $font-montserrat;
-    margin: 0;
-    padding: 0;
-    background-color: $black;
-    color: $white;
-}
-
-
-// Variables (puedes definir colores y tamaños aquí para reutilizar)
-$white: #FFFFFF;
-$gold: #FFA500;
-$green: #25D366;
-$black: #000000;
-
-// Estilos Generales
+// Reset de estilos básicos
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+// Estilo global para el body
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: $black;
-  color: $white;
-}
-
-.text-background {
-  font-family: 'Montserrat', sans-serif;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
+  background-color: #000000;
+  color: #FFFFFF;
+  line-height: 1.5;
+  font-size: 16px;
 }

@@ -1,33 +1,32 @@
-// Footer Styles
 footer.site-footer {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   padding: 20px;
-  background-color: $black;
-  border-top: 4px solid $gold;
-  border-bottom: 4px solid $gold;
+  background-color: black;
+  border-top: 4px solid gold;
+  border-bottom: 4px solid gold;
 
   .footer-map-links {
     display: flex;
     justify-content: space-around;
     gap: 20px;
     flex-wrap: wrap;
-  }
 
-  .footer-map-item {
-    width: 30%;
-    text-align: center;
-    margin: 0 10px;
+    .footer-map-item {
+      width: 30%;
+      text-align: center;
+      margin: 0 10px;
 
-    iframe {
-      width: 100%;
-      height: 200px;
-    }
+      iframe {
+        width: 100%;
+        height: 200px;
+      }
 
-    p {
-      margin-top: 5px;
-      font-size: 1em;
-      color: $white;
+      p {
+        margin-top: 5px;
+        font-size: 1em;
+        color: white;
+      }
     }
   }
 
@@ -38,45 +37,29 @@ footer.site-footer {
     margin-top: 20px;
     padding: 0 20px;
     flex-wrap: wrap;
-  }
 
-  .footer-social-links {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .footer-social-item {
-    text-align: center;
-
-    p {
-      color: $white;
-      font-size: 1.1em;
-      margin: 5px 0 0;
+    .footer-social-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 10px;
     }
 
-    .footer-social-icon {
-      width: 30px;
-      height: 30px;
-      vertical-align: middle;
+    .footer-logo-item {
+      width: 100px;
+      margin: 10px 0;
+
+      .footer-logo {
+        width: 100px;
+        height: auto;
+      }
     }
-  }
 
-  .footer-logo-item {
-    width: 100px;
-    margin: 10px 0;
-  }
-
-  .footer-logo {
-    width: 100px;
-    height: auto;
-  }
-
-  #footer-whatsapp {
-    display: inline-block;
-    margin: 10px 10px 0;
-    width: 50px;
+    #footer-whatsapp {
+      display: inline-block;
+      margin: 10px 10px 0;
+      width: 50px;
+    }
   }
 }
