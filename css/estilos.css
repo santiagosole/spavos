@@ -122,6 +122,7 @@ main {
   max-width: 400px;
   height: auto;
   border-radius: 10px;
+  object-fit: cover; /* Asegura que la imagen se recorte y mantenga proporciones */
 }
 .tags-section .tag h3 {
   color: #FFFFFF;
@@ -377,35 +378,22 @@ footer.site-footer .footer-social-media #footer-whatsapp {
   width: 50px;
 }
 
-@media (max-width: 941px) {
-  header h1 {
-    font-size: 2em;
-  }
-  nav a {
-    font-size: 1em;
-    margin: 0 10px;
-  }
-  .background-section h2 {
-    font-size: 2em;
-  }
-  .background-section p {
-    font-size: 1em;
-  }
-  .contact-button {
-    font-size: 1em;
-  }
+@media screen and (max-width: 941px) {
   .tags-section {
     flex-direction: column;
     align-items: center;
+  }
+  .tag img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+  .background-section {
+    height: 90vh;
   }
 }
 @media screen and (max-width: 768px) {
   .background-section h2 {
     font-size: 1.8em;
-  }
-  .contact-button {
-    font-size: 1em;
-    padding: 8px 16px;
   }
   .tags-section {
     margin: 20px 0;
@@ -418,18 +406,8 @@ footer.site-footer .footer-social-media #footer-whatsapp {
   }
 }
 @media screen and (max-width: 480px) {
-  header h1 {
-    font-size: 1.6em;
-  }
-  nav a {
-    font-size: 0.9em;
-    margin: 0 5px;
-  }
   .background-section h2 {
     font-size: 1.5em;
-  }
-  .background-section p {
-    font-size: 0.9em;
   }
   .tags-section {
     flex-direction: column;
@@ -441,26 +419,9 @@ footer.site-footer .footer-social-media #footer-whatsapp {
   .products-image {
     max-height: 250px;
   }
-}
-@media (max-width: 1200px) {
-  header h1 {
-    font-size: 2.2em;
-  }
-  nav a {
-    font-size: 1.1em;
-  }
-  .background-section h2 {
-    font-size: 2.3em;
-  }
-  .background-section p {
-    font-size: 1.1em;
-  }
-  .contact-button {
-    font-size: 1.1em;
-  }
-  .tags-section {
-    flex-direction: row;
-    justify-content: space-around;
+  .background-section {
+    padding: 20px;
+    height: 80vh;
   }
 }
 

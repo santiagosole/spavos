@@ -1,43 +1,25 @@
-// ** Media Queries para pantallas de 941px a 360px **
+// --- Media Queries ---
+// Responsivo para tamaños entre 941px y 360px
 
-// Pantallas con un ancho máximo de 941px
-@media (max-width: 941px) {
-  header h1 {
-    font-size: 2em; // Reducimos el tamaño de la fuente del título en pantallas más pequeñas
-  }
-
-  nav a {
-    font-size: 1em;
-    margin: 0 10px; // Reducimos el margen entre los enlaces de navegación
-  }
-
-  .background-section h2 {
-    font-size: 2em; // Ajustamos el tamaño del subtítulo
-  }
-
-  .background-section p {
-    font-size: 1em; // Reducimos el tamaño del texto
-  }
-
-  .contact-button {
-    font-size: 1em; // Reducimos el tamaño de la fuente del botón
-  }
-
+@media screen and (max-width: 941px) {
   .tags-section {
-    flex-direction: column; // Cambiamos la dirección de los elementos en la sección de etiquetas
-    align-items: center; // Alineamos los elementos al centro
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tag img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .background-section {
+    height: 90vh;
   }
 }
 
-// Pantallas con un ancho máximo de 768px
 @media screen and (max-width: 768px) {
   .background-section h2 {
-    font-size: 1.8em; // Ajustamos el tamaño del subtítulo para pantallas aún más pequeñas
-  }
-
-  .contact-button {
-    font-size: 1em;
-    padding: 8px 16px; // Reducimos el tamaño del padding en pantallas pequeñas
+    font-size: 1.8em;
   }
 
   .tags-section {
@@ -45,73 +27,34 @@
   }
 
   .tag img {
-    max-width: 300px; // Reducimos el tamaño de las imágenes de las etiquetas
+    max-width: 300px;
   }
 
   .new-products-section h2 {
-    font-size: 1.5em; // Ajustamos el tamaño del título de los productos nuevos
+    font-size: 1.5em;
   }
 }
 
-// Pantallas con un ancho máximo de 480px
 @media screen and (max-width: 480px) {
-  header h1 {
-    font-size: 1.6em; // Ajustamos el tamaño del título para pantallas muy pequeñas
-  }
-
-  nav a {
-    font-size: 0.9em; // Reducimos aún más el tamaño de los enlaces
-    margin: 0 5px; // Reducimos el margen entre los enlaces
-  }
-
   .background-section h2 {
-    font-size: 1.5em; // Reducimos el tamaño del subtítulo en pantallas pequeñas
-  }
-
-  .background-section p {
-    font-size: 0.9em; // Reducimos el tamaño del texto para pantallas pequeñas
+    font-size: 1.5em;
   }
 
   .tags-section {
-    flex-direction: column; // Cambiamos la dirección de los elementos en la sección de etiquetas
-    align-items: center; // Alineamos los elementos al centro
+    flex-direction: column;
+    align-items: center;
   }
 
   .tag img {
-    max-width: 250px; // Reducimos aún más el tamaño de las imágenes de las etiquetas
+    max-width: 250px;
   }
 
   .products-image {
-    max-height: 250px; // Ajustamos la altura de las imágenes de productos
-  }
-}
-
-// ** Media Queries para pantallas de 1200px a 941px **
-
-// Pantallas con un ancho máximo de 1200px
-@media (max-width: 1200px) {
-  header h1 {
-    font-size: 2.2em; // Ajustamos el tamaño de la fuente del título para pantallas medianas
+    max-height: 250px;
   }
 
-  nav a {
-    font-size: 1.1em; // Ajustamos el tamaño de los enlaces
-  }
-
-  .background-section h2 {
-    font-size: 2.3em; // Ajustamos el tamaño del subtítulo para pantallas medianas
-  }
-
-  .background-section p {
-    font-size: 1.1em; // Ajustamos el tamaño del texto
-  }
-
-  .contact-button {
-    font-size: 1.1em; // Aumentamos ligeramente el tamaño del botón
-  }
-
-  .tags-section {
-    flex-direction: row; // Devolvemos los elementos a una fila en pantallas más grandes
-    justify-content: space-around; // Distribuimos las etiquetas con espacio
+  .background-section {
+    padding: 20px;
+    height: 80vh;
   }
 }
