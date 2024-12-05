@@ -58,3 +58,194 @@
     height: 80vh;
   }
 }
+
+/* Consultas de medios */
+@media (max-width: 941px) and (min-width: 361px) {
+  .logos img {
+      width: 120px;
+  }
+
+  .contact-form-section {
+      padding: 20px;
+
+      h2 {
+          font-size: 1.5em;
+      }
+
+      p, label {
+          font-size: 0.9em;
+      }
+
+      input,
+      textarea {
+          font-size: 0.9em;
+      }
+
+      button {
+          font-size: 0.9em;
+      }
+  }
+
+  .contact-form {
+      width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logos img {
+      width: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logos img {
+      width: 80px;
+  }
+
+  .contact-form-section {
+      h2 {
+          font-size: 1.2em;
+      }
+
+      p {
+          font-size: 0.8em;
+      }
+
+      input,
+      textarea {
+          font-size: 0.8em;
+      }
+
+      button {
+          font-size: 0.8em;
+          padding: 10px 15px;
+      }
+  }
+}
+
+@media (max-width: 360px) {
+  .logos img {
+      width: 70px;
+  }
+
+  .contact-form-section {
+      h2 {
+          font-size: 1.1em;
+      }
+
+      p {
+          font-size: 0.75em;
+      }
+
+      input,
+      textarea {
+          font-size: 0.75em;
+      }
+
+      button {
+          font-size: 0.75em;
+          padding: 8px 12px;
+      }
+  }
+}
+
+/* Consultas de medios */
+@media (max-width: 941px) {
+  .us-section {
+      h2 {
+          font-size: 1.8em;
+      }
+
+      p {
+          font-size: 20px;
+      }
+  }
+
+  .background-text h2 {
+      font-size: 1.6em;
+  }
+
+  .background-image {
+      height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .us-section {
+      h2 {
+          font-size: 1.6em;
+      }
+
+      p {
+          font-size: 18px;
+      }
+  }
+
+  .background-text h2 {
+      font-size: 1.5em;
+  }
+
+  .background-image {
+      height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .us-section {
+      h2 {
+          font-size: 1.4em;
+      }
+
+      p {
+          font-size: 16px;
+      }
+  }
+
+  .background-text h2 {
+      font-size: 1.3em;
+  }
+
+  .background-image {
+      height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .us-section {
+      h2 {
+          font-size: 1.2em;
+      }
+
+      p {
+          font-size: 14px;
+      }
+  }
+
+  .background-text h2 {
+      font-size: 1.2em;
+  }
+
+  .background-image {
+      height: 220px;
+  }
+}
+
+@media (max-width: 360px) {
+  .us-section {
+      h2 {
+          font-size: 1.1em;
+      }
+
+      p {
+          font-size: 13px;
+      }
+  }
+
+  .background-text h2 {
+      font-size: 1em;
+  }
+
+  .background-image {
+      height: 200px;
+  }
+}

@@ -161,6 +161,41 @@ main {
   color: #FFFFFF;
 }
 
+/* Funcionalidades reutilizables */
+input:focus,
+textarea:focus {
+  border-color: goldenrod;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  background-color: goldenrod;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: darkgoldenrod;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  color: black;
+  background-color: #fff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -321,6 +356,101 @@ main .new-products-section h2 {
   color: #FFFFFF;
 }
 
+logos {
+  padding: 20px;
+  text-align: center;
+}
+logos img {
+  width: 150px;
+  margin: 0 20px;
+  transition: width 0.3s ease;
+}
+
+.contact-form-section {
+  padding: 40px;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  text-align: center;
+}
+.contact-form-section h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+  color: white;
+}
+.contact-form-section p {
+  margin-bottom: 15px;
+  color: white;
+  font-size: 1em;
+}
+.contact-form-section label {
+  display: block;
+  margin: 15px 0 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  gap: 15px;
+}
+
+.us-section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.us-section img.logo {
+  display: block;
+  margin: 20px auto;
+  max-width: 200px;
+}
+.us-section p {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 30px;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+
+.team-section {
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-image {
+  background-image: url("../img/spa-vos.nosotros2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-text {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
+.background-text h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8em;
+  margin: 0;
+}
+
 footer.site-footer {
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -422,6 +552,145 @@ footer.site-footer .footer-social-media #footer-whatsapp {
   .background-section {
     padding: 20px;
     height: 80vh;
+  }
+}
+/* Consultas de medios */
+@media (max-width: 941px) and (min-width: 361px) {
+  .logos img {
+    width: 120px;
+  }
+  .contact-form-section {
+    padding: 20px;
+  }
+  .contact-form-section h2 {
+    font-size: 1.5em;
+  }
+  .contact-form-section p, .contact-form-section label {
+    font-size: 0.9em;
+  }
+  .contact-form-section input,
+  .contact-form-section textarea {
+    font-size: 0.9em;
+  }
+  .contact-form-section button {
+    font-size: 0.9em;
+  }
+  .contact-form {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .logos img {
+    width: 100px;
+  }
+}
+@media (max-width: 500px) {
+  .logos img {
+    width: 80px;
+  }
+  .contact-form-section h2 {
+    font-size: 1.2em;
+  }
+  .contact-form-section p {
+    font-size: 0.8em;
+  }
+  .contact-form-section input,
+  .contact-form-section textarea {
+    font-size: 0.8em;
+  }
+  .contact-form-section button {
+    font-size: 0.8em;
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 360px) {
+  .logos img {
+    width: 70px;
+  }
+  .contact-form-section h2 {
+    font-size: 1.1em;
+  }
+  .contact-form-section p {
+    font-size: 0.75em;
+  }
+  .contact-form-section input,
+  .contact-form-section textarea {
+    font-size: 0.75em;
+  }
+  .contact-form-section button {
+    font-size: 0.75em;
+    padding: 8px 12px;
+  }
+}
+/* Consultas de medios */
+@media (max-width: 941px) {
+  .us-section h2 {
+    font-size: 1.8em;
+  }
+  .us-section p {
+    font-size: 20px;
+  }
+  .background-text h2 {
+    font-size: 1.6em;
+  }
+  .background-image {
+    height: 350px;
+  }
+}
+@media (max-width: 768px) {
+  .us-section h2 {
+    font-size: 1.6em;
+  }
+  .us-section p {
+    font-size: 18px;
+  }
+  .background-text h2 {
+    font-size: 1.5em;
+  }
+  .background-image {
+    height: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .us-section h2 {
+    font-size: 1.4em;
+  }
+  .us-section p {
+    font-size: 16px;
+  }
+  .background-text h2 {
+    font-size: 1.3em;
+  }
+  .background-image {
+    height: 250px;
+  }
+}
+@media (max-width: 480px) {
+  .us-section h2 {
+    font-size: 1.2em;
+  }
+  .us-section p {
+    font-size: 14px;
+  }
+  .background-text h2 {
+    font-size: 1.2em;
+  }
+  .background-image {
+    height: 220px;
+  }
+}
+@media (max-width: 360px) {
+  .us-section h2 {
+    font-size: 1.1em;
+  }
+  .us-section p {
+    font-size: 13px;
+  }
+  .background-text h2 {
+    font-size: 1em;
+  }
+  .background-image {
+    height: 200px;
   }
 }
 
