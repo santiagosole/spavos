@@ -249,3 +249,59 @@
       height: 200px;
   }
 }
+
+
+@media (max-width: 941px) and (min-width: 360px) {
+  .productsimage-section {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+  }
+
+  .products-section {
+    h2 {
+      font-size: 1.8em;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+
+// queries.scss
+
+// Media Query para pantallas entre 941px y 360px
+@media (max-width: 941px) and (min-width: 360px) {
+  .services-section .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .services-section .col-md-4 {
+    padding: 10px;
+  }
+
+  .services-section h2 {
+    font-size: 1.8em;
+  }
+
+  .services-section p {
+    font-size: 1.1em;
+  }
+}
+
+// Media Query para pantallas menores a 360px
+@media (max-width: 360px) {
+  .services-section .col-md-4 {
+    padding: 8px;
+  }
+
+  .services-section h2 {
+    font-size: 1.6em;
+  }
+
+  .services-section p {
+    font-size: 1em;
+  }
+}

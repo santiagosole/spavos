@@ -253,3 +253,99 @@ input,
   button {
       @extend %button-style;
   }
+
+
+ 
+  // Animación de difuminado para las imágenes
+@keyframes blur-in {
+  0% {
+    filter: blur(10px); // Comienza desenfocada
+    opacity: 0; // Comienza invisible
+  }
+  50% {
+    filter: blur(5px); // Reduce el desenfoque
+    opacity: 0.6; // La imagen empieza a hacerse visible
+  }
+  100% {
+    filter: blur(0); // La imagen vuelve a su estado nítido
+    opacity: 1; // La imagen es completamente visible
+  }
+}
+
+.productsimage-section .tag img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.5s ease-in-out; // Transición suave para el desenfoque
+
+  &:hover {
+    filter: blur(5px); // Aplicamos el desenfoque al pasar el cursor
+    opacity: 0.7; // Reducimos la opacidad
+  }
+}
+
+
+// Variables globales
+$primary-color: white;
+$secondary-color: gold;
+$bg-color: #2c3e50;
+$text-color: white;
+$font-family: 'Roboto', sans-serif;
+$font-size: 100px;
+$font-size-large: 2em;
+$font-size-h3: 1.5em;
+
+// Animaciones
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+// Funcionalidades específicas para las clases
+
+// Efectos de imagen y etiquetas
+.tag {
+  background-color: $bg-color;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+
+  &:hover {
+    animation: scale-up 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    animation: fade-in 1s ease-out;
+  }
+
+  h3 {
+    font-family: $font-family;
+    font-size: $font-size-h3;
+    color: $primary-color;
+    margin-top: 15px;
+  }
+}
+

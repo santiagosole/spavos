@@ -217,3 +217,108 @@ logos {
       margin: 0;
   }
 }
+
+// Variables globales de uso común
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Roboto', 'Lora', sans-serif;
+$color-white: #ffffff;
+
+.products-section {
+  text-align: center; // Centra el contenido
+  margin-bottom: 20px; // Espaciado inferior
+
+  h2 {
+    font-family: $font-primary; // Fuente principal
+    font-size: 2.2em; // Tamaño del título
+    font-weight: 700; // Peso del texto
+    color: $color-white; // Color blanco
+    text-align: center; // Centrado
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-family: $font-secondary; // Fuente secundaria
+    margin-bottom: 1.3em; // Espaciado inferior
+    color: $color-white; // Color blanco
+    text-align: center; // Centrado
+    font-size: 25px; // Tamaño del texto
+  }
+}
+
+
+// Diseño base de la grilla de imágenes
+.productsimage-section {
+  display: grid; // Usamos grid layout
+  grid-template-columns: repeat(4, 1fr); // Cuatro columnas iguales
+  gap: 20px; // Espaciado entre elementos
+  padding: 20px; // Relleno interno
+
+  .tag {
+    img {
+      width: 100%; // Ancho completo
+      height: auto; // Altura proporcional
+      border-radius: 8px; // Bordes redondeados
+    }
+  }
+}
+
+
+.services-section {
+  background-color: #121212;  // Puedes ajustar el color de fondo
+  color: #ffffff;  // Color de texto blanco
+  text-align: center;  // Centra el contenido en la sección
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;  // Aumento el tamaño con rem
+    font-weight: 700;
+    color: white;
+    margin-top: 40px;  // Margen superior
+    margin-bottom: 20px;  // Margen inferior
+  }
+
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;  // Aumento el tamaño del texto
+    color: white;
+    margin-bottom: 30px;  // Margen inferior para separar del contenido siguiente
+  }
+
+  // Contenedor de las imágenes y el contenido
+  .row {
+    display: flex;
+    justify-content: center;  // Centra las columnas
+    gap: 20px;  // Espacio entre las columnas
+  }
+
+  // Estilo para las columnas (3 imágenes en el contenedor)
+  .col-md-4 {
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+
+    .tag {
+      background-color: #222;  // Fondo oscuro para el contenedor
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 100px;  // Limita la altura máxima de la imagen
+        object-fit: cover;  // Ajusta la imagen para que no se deforme
+        border-radius: 8px;
+      }
+
+      h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.2rem;  // Tamaño adecuado para el título dentro del servicio
+        color: #ddd;  // Color más claro para los títulos de los servicios
+        margin-top: 10px;  // Separación del título respecto a la imagen
+      }
+    }
+  }
+}
+
