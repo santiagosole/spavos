@@ -116,9 +116,9 @@ logos {
   text-align: center;
 
   img {
-      width: 150px;
-      margin: 0 20px;
-      transition: width 0.3s ease;
+    width: 150px;
+    margin: 0 20px;
+    transition: width 0.3s ease;
   }
 }
 
@@ -131,26 +131,26 @@ logos {
   text-align: center;
 
   h2 {
-      font-family: 'Montserrat', sans-serif;
-      margin-bottom: 30px;
-      font-size: 1.8em;
-      color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    color: white;
   }
 
   p {
-      margin-bottom: 15px;
-      color: white;
-      font-size: 1em;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1em;
   }
 
   label {
-      display: block;
-      margin: 15px 0 5px;
-      color: white;
-      font-weight: bold;
+    display: block;
+    margin: 15px 0 5px;
+    color: white;
+    font-weight: bold;
   }
 
-  
+
 }
 
 .contact-form {
@@ -164,27 +164,27 @@ logos {
 
 .us-section {
   h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.2em;
-      font-weight: 700;
-      color: white;
-      text-align: center;
-      margin-top: 40px;
-      margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 
   img.logo {
-      display: block;
-      margin: 20px auto;
-      max-width: 200px;
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
   }
 
   p {
-      font-family: 'Montserrat', sans-serif;
-      margin-bottom: 30px;
-      color: white;
-      text-align: center;
-      font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+    font-size: 25px;
   }
 }
 
@@ -212,113 +212,108 @@ logos {
   padding: 10px;
 
   h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.8em;
-      margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    margin: 0;
   }
 }
 
-// Variables globales de uso común
 $font-primary: 'Montserrat', sans-serif;
 $font-secondary: 'Roboto', 'Lora', sans-serif;
 $color-white: #ffffff;
 
 .products-section {
-  text-align: center; // Centra el contenido
-  margin-bottom: 20px; // Espaciado inferior
+  text-align: center;
+  margin-bottom: 20px;
 
   h2 {
-    font-family: $font-primary; // Fuente principal
-    font-size: 2.2em; // Tamaño del título
-    font-weight: 700; // Peso del texto
-    color: $color-white; // Color blanco
-    text-align: center; // Centrado
+    font-family: $font-primary;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: $color-white;
+    text-align: center;
     margin-top: 40px;
     margin-bottom: 20px;
   }
 
   p {
-    font-family: $font-secondary; // Fuente secundaria
-    margin-bottom: 1.3em; // Espaciado inferior
-    color: $color-white; // Color blanco
-    text-align: center; // Centrado
-    font-size: 25px; // Tamaño del texto
+    font-family: $font-secondary;
+    margin-bottom: 1.3em;
+    color: $color-white;
+    text-align: center;
+    font-size: 25px;
   }
 }
 
 
-// Diseño base de la grilla de imágenes
 .productsimage-section {
-  display: grid; // Usamos grid layout
-  grid-template-columns: repeat(4, 1fr); // Cuatro columnas iguales
-  gap: 20px; // Espaciado entre elementos
-  padding: 20px; // Relleno interno
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
 
   .tag {
     img {
-      width: 100%; // Ancho completo
-      height: auto; // Altura proporcional
-      border-radius: 8px; // Bordes redondeados
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
   }
 }
 
 
 .services-section {
-  background-color: #121212;  // Puedes ajustar el color de fondo
-  color: #ffffff;  // Color de texto blanco
-  text-align: center;  // Centra el contenido en la sección
+  background-color: #121212;
+  color: #ffffff;
+  text-align: center;
 
   h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.5rem;  // Aumento el tamaño con rem
+    font-size: 3.5rem;
     font-weight: 700;
     color: white;
-    margin-top: 40px;  // Margen superior
-    margin-bottom: 20px;  // Margen inferior
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 
   p {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;  // Aumento el tamaño del texto
+    font-size: 1.5rem;
     color: white;
-    margin-bottom: 30px;  // Margen inferior para separar del contenido siguiente
+    margin-bottom: 30px;
   }
 
-  // Contenedor de las imágenes y el contenido
   .row {
     display: flex;
-    justify-content: center;  // Centra las columnas
-    gap: 20px;  // Espacio entre las columnas
+    justify-content: center;
+    gap: 20px;
   }
 
-  // Estilo para las columnas (3 imágenes en el contenedor)
   .col-md-4 {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
 
     .tag {
-      background-color: #222;  // Fondo oscuro para el contenedor
+      background-color: #222;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-      
+
       img {
         width: 100%;
         height: auto;
-        max-height: 100px;  // Limita la altura máxima de la imagen
-        object-fit: cover;  // Ajusta la imagen para que no se deforme
+        max-height: 100px;
+        object-fit: cover;
         border-radius: 8px;
       }
 
       h3 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 1.2rem;  // Tamaño adecuado para el título dentro del servicio
-        color: #ddd;  // Color más claro para los títulos de los servicios
-        margin-top: 10px;  // Separación del título respecto a la imagen
+        font-size: 1.2rem;
+        color: #ddd;
+        margin-top: 10px;
       }
     }
   }
 }
-

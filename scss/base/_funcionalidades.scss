@@ -1,35 +1,28 @@
-// --- VARIABLES ---
-// Colores y variables generales
-$color-fondo-header: #000000;  // Color de fondo del header
-$color-secundario: #333333;    // Color secundario (para contenedores, etc.)
-$color-texto: #FFFFFF;        // Color de texto principal
-$color-dorado: #FFA500;       // Color dorado para bordes y acentos
-$color-fondo-footer: #000000; // Color de fondo del footer
-$padding-base: 20px;          // Padding general
-$font-base: 'Montserrat', sans-serif; // Fuente base
+$color-fondo-header: #000000;
+$color-secundario: #333333;
+$color-texto: #FFFFFF;
+$color-dorado: #FFA500;
+$color-fondo-footer: #000000;
+$padding-base: 20px;
+$font-base: 'Montserrat', sans-serif;
 
-// --- MIXINS ---
-// Mixin para bordes redondeados
 @mixin borde-redondeado($radio) {
   border-radius: $radio;
 }
 
-// Mixin para aplicar texto en negrita con color
 @mixin texto-en-negrita($color) {
   font-weight: bold;
   color: $color;
 }
 
-// --- APLICACIÓN DE VARIABLES Y MIXINS ---
 
-// **HEADER**
 header {
-  background-color: $color-fondo-header; // Usamos la variable para el color de fondo
-  color: $color-texto;                   // Usamos la variable para el color de texto
-  padding: $padding-base;                // Usamos la variable para el padding
-  font-family: $font-base;               // Usamos la variable para la fuente base
+  background-color: $color-fondo-header;
+  color: $color-texto;
+  padding: $padding-base;
+  font-family: $font-base;
   text-align: center;
-  border-bottom: 2px solid $color-dorado; // Usamos la variable para el color del borde inferior
+  border-bottom: 2px solid $color-dorado;
 
   .logo img {
     max-width: 150px;
@@ -39,21 +32,19 @@ header {
 
   h1 {
     font-size: 2.5em;
-    color: $color-dorado;                // Usamos la variable para el color dorado del título
+    color: $color-dorado;
   }
 }
 
-// **FOOTER**
 footer.site-footer {
-  background-color: $color-fondo-footer; // Usamos la variable para el color de fondo
-  color: $color-texto;                   // Usamos la variable para el color de texto
-  text-align: center;
-  padding: $padding-base;                // Usamos la variable para el padding
-  border-top: 4px solid $color-dorado;   // Usamos la variable para el color del borde superior
-  border-bottom: 4px solid $color-dorado; // Usamos la variable para el color del borde inferior
+  background-color: $color-fondo-footer;
+  color: $color-texto;
+  padding: $padding-base;
+  border-top: 4px solid $color-dorado;
+  border-bottom: 4px solid $color-dorado;
 
-  /* Aplicamos mixin para bordes redondeados */
-  @include borde-redondeado(10px); // Aplicamos un borde redondeado de 10px al footer
+
+  @include borde-redondeado(10px);
 
   .footer-map-links {
     display: flex;
@@ -73,7 +64,7 @@ footer.site-footer {
       p {
         margin-top: 5px;
         font-size: 1em;
-        color: $color-texto; // Usamos la variable para el color de texto
+        color: $color-texto;
       }
     }
   }
@@ -97,12 +88,11 @@ footer.site-footer {
         text-align: center;
 
         p {
-          color: $color-texto; // Usamos la variable para el color del texto
+          color: $color-texto;
           font-size: 1.1em;
           margin: 5px 0 0;
-          
-          /* Aplicamos mixin de texto en negrita con color */
-          @include texto-en-negrita($color-dorado); // Usamos mixin para texto en negrita con color dorado
+
+          @include texto-en-negrita($color-dorado);
         }
 
         .footer-social-icon {
@@ -131,22 +121,22 @@ footer.site-footer {
 }
 
 main {
-  padding: $padding-base; // Usamos la variable para el padding general
+  padding: $padding-base;
 }
 
 .contact-button {
-  background-color: $color-dorado; // Usamos la variable para el color de fondo del botón
-  color: $color-texto;             // Usamos la variable para el color del texto
-  padding: 10px 20px;
+  background-color: $color-dorado;
+  color: $color-texto;
   font-size: 1.2em;
   border-radius: 5px;
   margin-top: 20px;
   text-decoration: none;
   display: inline-block;
 
-  /* Usamos mixin para bordes redondeados */
-  @include borde-redondeado(5px); // Aplicamos un borde redondeado de 5px
+
+  @include borde-redondeado(5px);
 }
+
 
 .tags-section {
   display: flex;
@@ -164,11 +154,11 @@ main {
       max-width: 400px;
       height: auto;
       border-radius: 10px;
-      object-fit: cover; /* Asegura que la imagen se recorte y mantenga proporciones */
+      object-fit: cover;
     }
 
     h3 {
-      color: $color-texto; // Usamos la variable para el color del texto
+      color: $color-texto;
       font-family: 'Poppins', sans-serif;
       font-size: 1.5em;
       font-weight: 700;
@@ -198,19 +188,18 @@ main {
     h2 {
       font-size: 2.5em;
       margin: 20px 0 10px;
-      color: $color-texto; // Usamos la variable para el color del texto
+      color: $color-texto;
     }
 
     p {
       font-size: 1.2em;
       margin: 0 20px;
-      color: $color-texto; // Usamos la variable para el color del texto
+      color: $color-texto;
     }
   }
 }
 
 
-/* Funcionalidades reutilizables */
 %focus-style {
   border-color: goldenrod;
   outline: none;
@@ -229,46 +218,47 @@ main {
   transition: background-color 0.3s;
 
   &:hover {
-      background-color: darkgoldenrod;
+    background-color: darkgoldenrod;
   }
 }
 
 input,
-  textarea {
-      width: 100%;
-      margin-bottom: 20px;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-      font-size: 1em;
-      color: black;
-      background-color: #fff;
+textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  color: black;
+  background-color: #fff;
 
-      &:focus {
-          @extend %focus-style;
-      }
+  &:focus {
+    @extend %focus-style;
   }
+}
 
-  button {
-      @extend %button-style;
-  }
+button {
+  @extend %button-style;
+}
 
 
- 
-  // Animación de difuminado para las imágenes
+
 @keyframes blur-in {
   0% {
-    filter: blur(10px); // Comienza desenfocada
-    opacity: 0; // Comienza invisible
+    filter: blur(10px);
+    opacity: 0;
   }
+
   50% {
-    filter: blur(5px); // Reduce el desenfoque
-    opacity: 0.6; // La imagen empieza a hacerse visible
+    filter: blur(5px);
+    opacity: 0.6;
   }
+
   100% {
-    filter: blur(0); // La imagen vuelve a su estado nítido
-    opacity: 1; // La imagen es completamente visible
+    filter: blur(0);
+    opacity: 1;
   }
 }
 
@@ -277,16 +267,15 @@ input,
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.5s ease-in-out; // Transición suave para el desenfoque
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.5s ease-in-out;
 
   &:hover {
-    filter: blur(5px); // Aplicamos el desenfoque al pasar el cursor
-    opacity: 0.7; // Reducimos la opacidad
+    filter: blur(5px);
+    opacity: 0.7;
   }
 }
 
 
-// Variables globales
 $primary-color: white;
 $secondary-color: gold;
 $bg-color: #2c3e50;
@@ -296,12 +285,12 @@ $font-size: 100px;
 $font-size-large: 2em;
 $font-size-h3: 1.5em;
 
-// Animaciones
 @keyframes fade-in {
   0% {
     opacity: 0;
     transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -312,14 +301,13 @@ $font-size-h3: 1.5em;
   0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(1.05);
   }
 }
 
-// Funcionalidades específicas para las clases
 
-// Efectos de imagen y etiquetas
 .tag {
   background-color: $bg-color;
   padding: 20px;
@@ -348,4 +336,3 @@ $font-size-h3: 1.5em;
     margin-top: 15px;
   }
 }
-
