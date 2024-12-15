@@ -12,6 +12,15 @@ header {
   font-family: 'Raleway', sans-serif;
   margin-bottom: 0;
 
+  nav {
+    ul {
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+  
+
   .logo img {
     display: block;
     margin: 0 auto;

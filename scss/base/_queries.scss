@@ -247,19 +247,33 @@
 }
 
 
-@media (max-width: 941px) and (min-width: 360px) {
+
+@media (max-width: 360px) {
   .productsimage-section {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 10px;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 1rem;
 
-  .products-section {
-    h2 {
-      font-size: 1.8em;
-    }
+    .tag {
+      flex: 1 1 100%; 
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
 
-    p {
-      font-size: 18px;
+      img {
+        width: 100%; 
+        height: auto; 
+      }
+
+      figcaption {
+        font-size: 0.75rem; 
+        text-align: center; 
+        padding: 0.5rem 0.5rem; 
+        word-wrap: break-word; 
+        line-height: 1.2; 
+        max-width: 90%; 
+      }
     }
   }
 }
@@ -296,5 +310,68 @@
 
   .services-section p {
     font-size: 1em;
+  }
+}
+
+@media (max-width: 941px) {
+  footer.site-footer {
+    padding: 15px; // Reduce el padding para ajustarse mejor a pantallas más pequeñas
+  }
+
+  footer.site-footer .footer-map-links {
+    flex-direction: column; // Apila los mapas verticalmente
+    align-items: center; // Centra los mapas
+    gap: 15px; // Reduce el espacio entre los mapas
+  }
+
+  footer.site-footer .footer-map-links .footer-map-item {
+    width: 90%; // Aumenta el ancho de los mapas para aprovechar mejor el espacio
+  }
+
+  footer.site-footer .footer-social-media {
+    flex-direction: column; // Apila los logos y las redes sociales
+    align-items: center; // Centra todos los elementos
+    gap: 20px; // Agrega espacio entre los bloques
+    padding: 10px 0; // Reduce el padding lateral
+  }
+
+  footer.site-footer .footer-social-media .footer-logo-item {
+    width: 120px; // Ajusta el tamaño de los logos
+  }
+
+  footer.site-footer .footer-social-media .footer-logo-item .footer-logo {
+    width: 120px; // Aumenta el tamaño del logo para mayor visibilidad
+  }
+
+  footer.site-footer .footer-social-media .footer-social-links {
+    flex-direction: column; // Apila los enlaces sociales
+    gap: 10px; // Reduce el espacio entre los enlaces
+  }
+
+  footer.site-footer .footer-social-media .footer-social-links .footer-social-item {
+    text-align: center;
+  }
+
+  footer.site-footer #footer-whatsapp {
+    margin: 15px auto 0; // Centra el ícono de WhatsApp
+    width: 40px; // Ajusta el tamaño del ícono
+  }
+}
+
+@media (max-width: 360px) {
+  footer.site-footer .footer-map-links .footer-map-item iframe {
+    height: 150px; // Reduce la altura de los mapas en pantallas muy pequeñas
+  }
+
+  footer.site-footer .footer-social-media .footer-logo-item {
+    width: 100px; // Reduce aún más el tamaño de los logos
+  }
+
+  footer.site-footer .footer-social-media .footer-logo-item .footer-logo {
+    width: 100px; // Ajusta proporcionalmente el tamaño
+  }
+
+  footer.site-footer .footer-social-media .footer-social-links {
+    gap: 5px; // Reduce el espacio entre los enlaces sociales
   }
 }

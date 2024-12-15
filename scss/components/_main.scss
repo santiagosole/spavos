@@ -226,6 +226,7 @@ $color-white: #ffffff;
   text-align: center;
   margin-bottom: 20px;
 
+
   h2 {
     font-family: $font-primary;
     font-size: 2.2em;
@@ -245,21 +246,38 @@ $color-white: #ffffff;
   }
 }
 
-
 .productsimage-section {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; // Permite que las imágenes se ajusten en múltiples líneas si es necesario
+  justify-content: space-between; // Distribuye el espacio entre las imágenes
+  gap: 1rem; // Espaciado entre los elementos
 
   .tag {
+    text-align: center; // Centra las imágenes y el texto
+    flex: 1 1 20%; // Asegura que cada imagen ocupe un 20% del ancho disponible
+    max-width: 20%; // Limita el ancho máximo de cada imagen
+    margin-bottom: 1rem; // Espaciado en la parte inferior de cada bloque
+
+    figure {
+      margin: 0;
+    }
+
     img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
+      width: 100%; // Hace que la imagen ocupe el 100% del contenedor
+      height: auto; // Mantiene la proporción de la imagen
+      border-radius: 8px; // Bordes redondeados para las imágenes
+    }
+
+    figcaption {
+      margin-top: 0.5rem; // Espaciado entre la imagen y el texto
+      font-size: 0.9rem; // Tamaño de la fuente para el texto
+      color: white; // Color gris para el texto
     }
   }
 }
+
+
+
 
 
 .services-section {

@@ -6,6 +6,24 @@ header {
   text-align: center;
   border-bottom: 2px solid #FFA500;
 }
+header .funcionalidades {
+  padding: 1rem;
+  margin: 0;
+  list-style-type: disc;
+}
+header .funcionalidades li {
+  margin-bottom: 0.5rem;
+}
+header .funcionalidades li:last-child {
+  margin-bottom: 0;
+}
+header .funcionalidades li a {
+  text-decoration: none;
+  color: white;
+}
+header .funcionalidades li a:hover {
+  color: goldenrod;
+}
 header .logo img {
   max-width: 150px;
   display: block;
@@ -19,11 +37,9 @@ header h1 {
 footer.site-footer {
   background-color: #000000;
   color: #FFFFFF;
-  text-align: center;
   padding: 20px;
   border-top: 4px solid #FFA500;
   border-bottom: 4px solid #FFA500;
-  /* Aplicamos mixin para bordes redondeados */
   border-radius: 10px;
 }
 footer.site-footer .footer-map-links {
@@ -67,7 +83,6 @@ footer.site-footer .footer-social-media .footer-social-links .footer-social-item
   color: #FFFFFF;
   font-size: 1.1em;
   margin: 5px 0 0;
-  /* Aplicamos mixin de texto en negrita con color */
   font-weight: bold;
   color: #FFA500;
 }
@@ -96,13 +111,11 @@ main {
 .contact-button {
   background-color: #FFA500;
   color: #FFFFFF;
-  padding: 10px 20px;
   font-size: 1.2em;
   border-radius: 5px;
   margin-top: 20px;
   text-decoration: none;
   display: inline-block;
-  /* Usamos mixin para bordes redondeados */
   border-radius: 5px;
 }
 
@@ -122,7 +135,7 @@ main {
   max-width: 400px;
   height: auto;
   border-radius: 10px;
-  object-fit: cover; /* Asegura que la imagen se recorte y mantenga proporciones */
+  object-fit: cover;
 }
 .tags-section .tag h3 {
   color: #FFFFFF;
@@ -161,7 +174,6 @@ main {
   color: #FFFFFF;
 }
 
-/* Funcionalidades reutilizables */
 input:focus,
 textarea:focus {
   border-color: goldenrod;
@@ -296,6 +308,9 @@ header {
   position: relative;
   font-family: "Raleway", sans-serif;
   margin-bottom: 0;
+}
+header nav ul li {
+  list-style-type: none;
 }
 header .logo img {
   display: block;
@@ -546,15 +561,29 @@ logos img {
 }
 
 .productsimage-section {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.productsimage-section .tag {
+  text-align: center;
+  flex: 1 1 20%;
+  max-width: 20%;
+  margin-bottom: 1rem;
+}
+.productsimage-section .tag figure {
+  margin: 0;
 }
 .productsimage-section .tag img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+.productsimage-section .tag figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: white;
 }
 
 .services-section {
@@ -709,7 +738,6 @@ footer.site-footer .footer-social-media #footer-whatsapp {
     height: 80vh;
   }
 }
-/* Consultas de medios */
 @media (max-width: 941px) and (min-width: 361px) {
   .logos img {
     width: 120px;
@@ -720,7 +748,8 @@ footer.site-footer .footer-social-media #footer-whatsapp {
   .contact-form-section h2 {
     font-size: 1.5em;
   }
-  .contact-form-section p, .contact-form-section label {
+  .contact-form-section p,
+  .contact-form-section label {
     font-size: 0.9em;
   }
   .contact-form-section input,
@@ -777,7 +806,6 @@ footer.site-footer .footer-social-media #footer-whatsapp {
     padding: 8px 12px;
   }
 }
-/* Consultas de medios */
 @media (max-width: 941px) {
   .us-section h2 {
     font-size: 1.8em;
@@ -848,16 +876,30 @@ footer.site-footer .footer-social-media #footer-whatsapp {
     height: 200px;
   }
 }
-@media (max-width: 941px) and (min-width: 360px) {
+@media (max-width: 360px) {
   .productsimage-section {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
-  .products-section h2 {
-    font-size: 1.8em;
+  .productsimage-section .tag {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .products-section p {
-    font-size: 18px;
+  .productsimage-section .tag img {
+    width: 100%;
+    height: auto;
+  }
+  .productsimage-section .tag figcaption {
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+    word-wrap: break-word;
+    line-height: 1.2;
+    max-width: 90%;
   }
 }
 @media (max-width: 941px) and (min-width: 360px) {
@@ -884,6 +926,56 @@ footer.site-footer .footer-social-media #footer-whatsapp {
   }
   .services-section p {
     font-size: 1em;
+  }
+}
+@media (max-width: 941px) {
+  footer.site-footer {
+    padding: 15px;
+  }
+  footer.site-footer .footer-map-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  footer.site-footer .footer-map-links .footer-map-item {
+    width: 90%;
+  }
+  footer.site-footer .footer-social-media {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  footer.site-footer .footer-social-media .footer-logo-item {
+    width: 120px;
+  }
+  footer.site-footer .footer-social-media .footer-logo-item .footer-logo {
+    width: 120px;
+  }
+  footer.site-footer .footer-social-media .footer-social-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer.site-footer .footer-social-media .footer-social-links .footer-social-item {
+    text-align: center;
+  }
+  footer.site-footer #footer-whatsapp {
+    margin: 15px auto 0;
+    width: 40px;
+  }
+}
+@media (max-width: 360px) {
+  footer.site-footer .footer-map-links .footer-map-item iframe {
+    height: 150px;
+  }
+  footer.site-footer .footer-social-media .footer-logo-item {
+    width: 100px;
+  }
+  footer.site-footer .footer-social-media .footer-logo-item .footer-logo {
+    width: 100px;
+  }
+  footer.site-footer .footer-social-media .footer-social-links {
+    gap: 5px;
   }
 }
 
