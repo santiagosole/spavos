@@ -345,69 +345,84 @@ header nav a:hover {
   cursor: pointer;
 }
 
-main {
-  padding: 20px;
-}
-main .background-section {
+.background-section {
   background-image: url("../img/spa-hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 40px 20px;
   position: relative;
 }
-main .background-section .text-background {
+.background-section .text-background {
   font-family: "Montserrat", sans-serif;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
+  max-width: 90%; /* Evita que el texto se salga de la imagen */
+  z-index: 2; /* Asegura que el texto esté sobre la imagen */
 }
-main .background-section h2 {
-  font-family: "Montserrat", sans-serif;
+.background-section .text-background h2 {
   font-size: 2.5em;
   margin: 20px 0 10px;
-  color: #FFFFFF;
+  color: white;
 }
-main .background-section p {
-  font-family: "Montserrat", sans-serif;
+.background-section .text-background p {
   font-size: 1.2em;
   margin: 0 20px;
-  color: #FFFFFF;
+  color: white;
 }
-main .background-section .contact-button {
-  background-color: #25D366;
-  color: #FFFFFF;
-  border: none;
-  padding: 10px 20px;
+.background-section .text-background .contact-button {
+  background-color: goldenrod;
+  color: white;
   font-size: 1.2em;
+  padding: 12px 20px;
   border-radius: 5px;
-  margin-top: 20px;
   text-decoration: none;
   display: inline-block;
+  margin-top: 20px;
 }
-main .tags-section {
+.background-section .text-background .contact-button:hover {
+  background-color: goldenrod;
+}
+
+#footer-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+#footer-whatsapp img {
+  width: 50px;
+  height: 50px;
+}
+
+.tags-section {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 20px 0;
 }
-main .tags-section .tag {
+.tags-section .tag {
   flex: 1;
   margin: 10px;
   text-align: center;
 }
-main .tags-section .tag img {
+.tags-section .tag img {
   width: 100%;
   max-width: 400px;
   height: auto;
   border-radius: 10px;
 }
-main .tags-section .tag h3 {
+.tags-section .tag h3 {
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   margin-top: 10px;
@@ -415,20 +430,21 @@ main .tags-section .tag h3 {
   font-size: 1.5em;
   font-weight: 700;
 }
-main .new-products-section {
+
+.new-products-section {
   width: 100%;
   position: relative;
   height: 300px;
   overflow: hidden;
 }
-main .new-products-section .products-image {
+.new-products-section .products-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   max-height: 300px;
 }
-main .new-products-section .text-background {
+.new-products-section .text-background {
   position: absolute;
   font-family: "Montserrat", sans-serif;
   top: 50%;
@@ -439,7 +455,7 @@ main .new-products-section .text-background {
   padding: 20px;
   z-index: 1;
 }
-main .new-products-section h2 {
+.new-products-section h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.8em;
   color: #FFFFFF;
@@ -587,62 +603,47 @@ logos img {
   color: white;
 }
 
-.services-section {
+body {
+  font-family: "Roboto", sans-serif;
   background-color: #121212;
   color: #ffffff;
-  text-align: center;
-  padding: 50px 0;
 }
 
-.services-section h2 {
+/* Título y párrafo */
+h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 3rem !important; /* Forzado con !important */
+  font-size: 2.5rem; /* Hacemos el h2 un poco más pequeño */
   font-weight: 700;
-  color: white;
   margin-bottom: 20px;
 }
 
-.services-section p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.25rem !important; /* Forzado con !important */
-  color: white;
+p {
+  font-size: 1.5rem; /* Agrandamos el párrafo */
+  line-height: 1.6;
   margin-bottom: 30px;
 }
 
-.services-section .row {
+/* Carrusel */
+.carousel-item .row {
   display: flex;
-  justify-content: space-between; /* Para que se distribuyan bien las columnas */
-  gap: 20px;
+  justify-content: space-between;
 }
-
-.services-section .col-md-4 {
+.carousel-item .col-md-4 {
   padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  max-width: 350px !important; /* Forzado con !important */
-  flex: 1 1 30%; /* Esto hará que las columnas se distribuyan mejor */
 }
 
-.services-section .col-md-4 .tag {
-  background-color: #222;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.services-section .col-md-4 .tag img {
+/* Estilo de las imágenes en el carrusel */
+.custom-img {
   width: 100%;
   height: auto;
-  max-height: 250px !important; /* Forzado con !important */
-  object-fit: cover;
+  max-height: 250px; /* Definir una altura máxima para las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
   border-radius: 8px;
 }
 
-.services-section .col-md-4 .tag h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
-  color: #ddd;
-  margin-top: 10px;
+/* Espaciado entre párrafo y las imágenes */
+.text-center p {
+  margin-bottom: 40px; /* Aumentamos el espacio entre el párrafo y las imágenes */
 }
 
 footer.site-footer {
@@ -702,50 +703,106 @@ footer.site-footer .footer-social-media #footer-whatsapp {
   width: 50px;
 }
 
-@media screen and (max-width: 941px) {
+@media (max-width: 941px) {
+  header {
+    padding: 15px;
+  }
+  .logo img {
+    max-width: 120px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  nav {
+    margin: 15px 0;
+  }
+  nav a {
+    font-size: 1em;
+    margin: 0 15px;
+  }
+}
+@media (max-width: 360px) {
+  header {
+    padding: 10px;
+  }
+  .logo img {
+    max-width: 100px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  nav {
+    margin: 10px 0;
+  }
+  nav a {
+    font-size: 0.9em;
+    margin: 0 10px;
+  }
+}
+@media (max-width: 941px) {
   .tags-section {
     flex-direction: column;
     align-items: center;
+    padding: 0 10px;
+  }
+  .tag {
+    margin-bottom: 20px;
+    width: 90%;
+    text-align: center;
   }
   .tag img {
+    width: 100%;
     max-width: 100%;
-    object-fit: cover;
+    height: auto;
+    border-radius: 10px;
   }
-  .background-section {
-    height: 90vh;
-  }
-}
-@media screen and (max-width: 768px) {
-  .background-section h2 {
-    font-size: 1.8em;
-  }
-  .tags-section {
-    margin: 20px 0;
-  }
-  .tag img {
-    max-width: 300px;
-  }
-  .new-products-section h2 {
-    font-size: 1.5em;
-  }
-}
-@media screen and (max-width: 480px) {
-  .background-section h2 {
-    font-size: 1.5em;
-  }
-  .tags-section {
-    flex-direction: column;
-    align-items: center;
-  }
-  .tag img {
-    max-width: 250px;
+  .new-products-section {
+    height: 250px;
   }
   .products-image {
-    max-height: 250px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
-  .background-section {
-    padding: 20px;
-    height: 80vh;
+  .text-background {
+    padding: 15px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+}
+@media (max-width: 360px) {
+  .tags-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .tag {
+    margin-bottom: 15px;
+    width: 95%;
+    text-align: center;
+  }
+  .tag img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .new-products-section {
+    height: 200px;
+  }
+  .products-image {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .text-background {
+    padding: 10px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 1.2em;
   }
 }
 @media (max-width: 941px) and (min-width: 361px) {

@@ -1,60 +1,138 @@
-@media screen and (max-width: 941px) {
-  .tags-section {
-    flex-direction: column;
-    align-items: center;
+
+
+// Media Query para pantallas con ancho máximo de 941px
+@media (max-width: 941px) {
+  header {
+    padding: 15px;
   }
 
-  .tag img {
-    max-width: 100%;
-    object-fit: cover;
+  .logo img {
+    max-width: 120px;  // Ajustar tamaño del logo
   }
 
-  .background-section {
-    height: 90vh;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .background-section h2 {
-    font-size: 1.8em;
+  h1 {
+    font-size: 2em;  // Reducir tamaño del título
   }
 
-  .tags-section {
-    margin: 20px 0;
-  }
-
-  .tag img {
-    max-width: 300px;
-  }
-
-  .new-products-section h2 {
-    font-size: 1.5em;
+  nav {
+    margin: 15px 0;
+    
+    a {
+      font-size: 1em;  // Reducir tamaño de los enlaces
+      margin: 0 15px;  // Reducir espacio entre los enlaces
+    }
   }
 }
 
-@media screen and (max-width: 480px) {
-  .background-section h2 {
-    font-size: 1.5em;
+// Media Query para pantallas con ancho máximo de 360px
+@media (max-width: 360px) {
+  header {
+    padding: 10px;
   }
 
+  .logo img {
+    max-width: 100px;  // Ajustar tamaño del logo
+  }
+
+  h1 {
+    font-size: 1.5em;  // Reducir tamaño del título
+  }
+
+  nav {
+    margin: 10px 0;
+    
+    a {
+      font-size: 0.9em;  // Reducir tamaño de los enlaces
+      margin: 0 10px;  // Reducir espacio entre los enlaces
+    }
+  }
+}
+
+
+
+
+@media (max-width: 941px) {
   .tags-section {
     flex-direction: column;
     align-items: center;
+    padding: 0 10px;  // Añadido para dar algo de margen en dispositivos más pequeños
+  }
+
+  .tag {
+    margin-bottom: 20px;
+    width: 90%; // Ajusta el tamaño de las imágenes y texto
+    text-align: center;
   }
 
   .tag img {
-    max-width: 250px;
+    width: 100%;  // Hace que las imágenes ocupen todo el espacio disponible
+    max-width: 100%; // Para evitar que las imágenes se desborden
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .new-products-section {
+    height: 250px; // Reducir el tamaño de la sección
   }
 
   .products-image {
-    max-height: 250px;
+    height: 100%; // Asegura que la imagen ocupe todo el espacio disponible
+    object-fit: cover;
+    object-position: center;
   }
 
-  .background-section {
-    padding: 20px;
-    height: 80vh;
+  .text-background {
+    padding: 15px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.4em; // Reducir el tamaño del texto
   }
 }
+
+@media (max-width: 360px) {
+  .tags-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px; // Añadido para dar algo de margen
+  }
+
+  .tag {
+    margin-bottom: 15px;
+    width: 95%; // Ajustar aún más el tamaño de las imágenes y texto
+    text-align: center;
+  }
+
+  .tag img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .new-products-section {
+    height: 200px; // Reducir aún más el tamaño de la sección
+  }
+
+  .products-image {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .text-background {
+    padding: 10px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.2em; // Ajustar aún más el tamaño del texto
+  }
+}
+
+
+
 
 @media (max-width: 941px) and (min-width: 361px) {
   .logos img {

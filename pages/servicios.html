@@ -9,7 +9,7 @@
         content="spa, relax, bienestar, salud, vacaciones, yacuzzi, pileta, masajes, cremas, mascarillas, profesionales, diversion, experiencia, productos, logo, descuentos, baño, resort, hotel, musica, aromas, descanso, sentidos">
     <meta name="description"
         content="En Spavos, ofrecemos una amplia gama de servicios diseñados para tu bienestar. Desde masajes relajantes hasta tratamientos faciales y circuitos de spa exclusivos, cada servicio está pensado para brindarte una experiencia de relajación total. Reserva hoy y renueva tu cuerpo y mente.">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <title>Servicios de Spa - Spavos | Masajes, tratamientos y más</title>
 </head>
@@ -30,35 +30,79 @@
             </ul>
           </nav>
     </header>
+    
     <main class="bg-dark text-white">
         <section class="container py-5">
+            <!-- Título y párrafo de la sección -->
             <section class="text-center mb-5">
                 <h2>Servicios</h2>
-                <p>Conoce nuestros servicios exclusivos, diseñados para brindarte una experiencia de relajación y
-                    bienestar incomparables.</p>
+                <p>Conoce nuestros servicios exclusivos, diseñados para brindarte una experiencia de relajación y bienestar incomparables.</p>
             </section>
-            <section class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="tag">
-                        <img src="../img/spa-vos-circuitospa.jpg" alt="spa" class="img-fluid rounded">
-                        <h3 class="mt-2">El clásico día de Spa</h3>
+    
+            <!-- Carousel (Carrousel) de Servicios -->
+            <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="tag">
+                                    <img src="../img/spa-vos-circuitospa.jpg" alt="spa" class="img-fluid rounded custom-img">
+                                    <h3 class="mt-2">El clásico día de Spa</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="tag">
+                                    <img src="../img/spa-vos-relax2.jpg" alt="relajacion" class="img-fluid rounded custom-img">
+                                    <h3 class="mt-2">Técnicas de relajación para descansar más que nunca</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="tag">
+                                    <img src="../img/spavos-masajes2.jpg" alt="masajes" class="img-fluid rounded custom-img">
+                                    <h3 class="mt-2">Masajes para fortalecer el descanso</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Segunda imagen del carrusel -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="tag">
+                                    <img src="../img/spavos-parejas.jfif" alt="spa" class="img-fluid rounded custom-img">
+                                    <h3 class="mt-2">Spa para parejas</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="tag">
+                                    <img src="../img/spavos-aromaterapia.jfif" alt="relajacion" class="img-fluid rounded custom-img">
+                                    <h3 class="mt-2">Relajación profunda con aromaterapia</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="tag">
+                                    <img src="../img/spavos-circuito2.jfif" alt="masajes" class="img-fluid rounded custom-img">
+                                    <h3 class="mt-2">Circuito de Spa de lujo</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="tag">
-                        <img src="../img/spa-vos-relax2.jpg" alt="relajacion" class="img-fluid rounded">
-                        <h3 class="mt-2">Técnicas de relajación para descansar más que nunca</h3>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="tag">
-                        <img src="../img/spavos-masajes2.jpg" alt="masajes" class="img-fluid rounded">
-                        <h3 class="mt-2">Masajes para fortalecer el descanso</h3>
-                    </div>
-                </div>
-            </section>
+                <!-- Controles del carrusel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
         </section>
     </main>
+    
+
+
 
     <footer>
         <footer class="site-footer">
@@ -108,6 +152,7 @@
                 <img src="../img/spavos-whatsapp.png" alt="Logo de WhatsApp">
             </a>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
