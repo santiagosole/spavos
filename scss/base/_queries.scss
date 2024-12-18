@@ -49,88 +49,184 @@
 }
 
 
-
-
-@media (max-width: 941px) {
-  .tags-section {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 10px;  // Añadido para dar algo de margen en dispositivos más pequeños
-  }
-
-  .tag {
-    margin-bottom: 20px;
-    width: 90%; // Ajusta el tamaño de las imágenes y texto
-    text-align: center;
-  }
-
-  .tag img {
-    width: 100%;  // Hace que las imágenes ocupen todo el espacio disponible
-    max-width: 100%; // Para evitar que las imágenes se desborden
-    height: auto;
-    border-radius: 10px;
-  }
-
-  .new-products-section {
-    height: 250px; // Reducir el tamaño de la sección
-  }
-
-  .products-image {
-    height: 100%; // Asegura que la imagen ocupe todo el espacio disponible
-    object-fit: cover;
-    object-position: center;
+@media screen and (max-width: 941px) {
+  .background-section {
+    padding: 20px;
   }
 
   .text-background {
     padding: 15px;
-    text-align: center;
+    max-width: 90%; /* Evita que el texto se salga de la imagen */
+    font-size: 1.1em;
   }
 
-  h2 {
-    font-size: 1.4em; // Reducir el tamaño del texto
-  }
-}
-
-@media (max-width: 360px) {
-  .tags-section {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 10px; // Añadido para dar algo de margen
-  }
-
-  .tag {
-    margin-bottom: 15px;
-    width: 95%; // Ajustar aún más el tamaño de las imágenes y texto
-    text-align: center;
-  }
-
-  .tag img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+  .contact-button {
+    font-size: 1em;
+    padding: 12px 18px;
   }
 
   .new-products-section {
-    height: 200px; // Reducir aún más el tamaño de la sección
+    height: auto;
+    padding: 20px;
   }
 
-  .products-image {
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  .tags-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tag {
+    margin: 10px 0;
+    width: 80%;  // Reducir el tamaño de las tarjetas
+  }
+
+  .tag img {
+    max-width: 100%;
+    height: auto;
   }
 
   .text-background {
     padding: 10px;
-    text-align: center;
+    max-width: 100%; // Ajustar para evitar desbordes
   }
 
-  h2 {
-    font-size: 1.2em; // Ajustar aún más el tamaño del texto
+  .contact-button {
+    font-size: 1em;
+    padding: 10px 15px;
+  }
+
+  .new-products-section {
+    height: auto;
+    padding: 20px;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .tags-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tag {
+    margin: 10px 0;
+    width: 80%;  // Reducir el tamaño de las tarjetas
+  }
+
+  .tag img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .background-section {
+    padding: 20px;
+  }
+
+  .text-background {
+    padding: 10px;
+    max-width: 100%; // Ajustar para evitar desbordes
+  }
+
+  .contact-button {
+    font-size: 1em;
+    padding: 10px 15px;
+  }
+
+  .new-products-section {
+    height: auto;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .background-section {
+    padding: 10px;
+    height: 60vh; /* Ajusta la altura para pantallas pequeñas */
+  }
+
+  .text-background {
+    padding: 10px;
+    font-size: 0.9em;
+    max-width: 100%; /* Hace que el texto ocupe todo el ancho disponible */
+  }
+
+  .tags-section {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .tag {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em; /* Reducir el tamaño de la fuente en las tarjetas */
+  }
+
+  .tag img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact-button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin-top: 15px;
+  }
+
+  .new-products-section {
+    height: auto;
+    padding: 10px;
+  }
+
+  .text-background h2 {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .background-section {
+    padding: 10px;
+    height: 50vh; /* Reduce la altura aún más en pantallas pequeñas */
+  }
+
+  .text-background {
+    padding: 8px;
+    font-size: 0.8em;
+    max-width: 100%; /* Asegura que el texto no se salga */
+  }
+
+  .contact-button {
+    font-size: 0.9em;
+    padding: 8px 15px;
+  }
+
+  .new-products-section {
+    height: auto;
+    padding: 10px;
+  }
+
+  .text-background h2 {
+    font-size: 1.2em; /* Ajusta aún más el tamaño del título */
+  }
+
+  .tags-section {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .tag {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7em; /* Reducir aún más el tamaño de la fuente en las tarjetas */
+  }
+
+  .tag img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 
 
