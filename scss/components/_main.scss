@@ -294,6 +294,7 @@ $color-white: #ffffff;
     }
 
     figcaption {
+      word-wrap: break-word; /* Evita que las palabras largas se desborden */
       margin-top: 0.5rem; 
       font-size: 0.9rem; 
       color: white; 

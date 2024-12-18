@@ -598,6 +598,7 @@ logos img {
   border-radius: 8px;
 }
 .productsimage-section .tag figcaption {
+  word-wrap: break-word; /* Evita que las palabras largas se desborden */
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: white;
@@ -945,28 +946,25 @@ footer.site-footer .footer-social-media #footer-whatsapp {
 }
 @media (max-width: 360px) {
   .productsimage-section {
+    justify-content: center; /* Centrar los items */
+  }
+  .tag {
+    flex: 1 1 45%; /* Ajustar el ancho de los elementos */
+    max-width: 45%; /* Asegurar que no se expandan demasiado */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    flex-direction: column; /* Asegurar que imagen y texto estén en columna */
+    align-items: center; /* Centrar contenido dentro de cada .tag */
+    text-align: center; /* Asegurar que el texto esté centrado */
   }
-  .productsimage-section .tag {
-    flex: 1 1 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .tag img {
+    width: 100%; /* Hacer que las imágenes ocupen todo el espacio disponible */
+    height: auto; /* Mantener la proporción de las imágenes */
+    object-fit: cover; /* Asegurar que la imagen no se distorsione */
   }
-  .productsimage-section .tag img {
-    width: 100%;
-    height: auto;
-  }
-  .productsimage-section .tag figcaption {
-    font-size: 0.75rem;
-    text-align: center;
-    padding: 0.5rem 0.5rem;
-    word-wrap: break-word;
-    line-height: 1.2;
-    max-width: 90%;
+  .tag figcaption {
+    font-size: 0.8rem; /* Ajustar el tamaño del texto */
+    margin-top: 0.5rem; /* Espaciado entre la imagen y el texto */
+    word-wrap: break-word; /* Evitar que el texto se desborde */
   }
 }
 @media (max-width: 941px) and (min-width: 360px) {
