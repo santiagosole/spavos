@@ -14,6 +14,7 @@
   position: relative;
 }
 
+
 .text-background {
   font-family: 'Montserrat', sans-serif;
   background-color: rgba(0, 0, 0, 0.5);
@@ -45,6 +46,10 @@
   text-decoration: none;
   display: inline-block;
   margin-top: 20px;
+
+  &:hover {
+    background-color: goldenrod;
+  }
 }
 
 #footer-whatsapp {
@@ -82,6 +87,7 @@
   border-radius: 10px;
 }
 
+
 .tag h3 {
   color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
@@ -90,6 +96,7 @@
   font-size: 1.5em;
   font-weight: 700;
 }
+
 
 .new-products-section {
   width: 100%;
@@ -107,6 +114,7 @@
   object-position: center;
   max-height: 300px;
 }
+
 
 .text-background {
   position: absolute;
@@ -126,15 +134,17 @@
   color: #FFFFFF;
 }
 
+
+
 logos {
   padding: 20px;
   text-align: center;
-}
 
-img {
-  width: 150px;
-  margin: 0 20px;
-  transition: width 0.3s ease;
+  img {
+    width: 150px;
+    margin: 0 20px;
+    transition: width 0.3s ease;
+  }
 }
 
 .contact-form-section {
@@ -144,26 +154,28 @@ img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
   text-align: center;
-}
 
-.contact-form-section h2 {
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 30px;
-  font-size: 1.8em;
-  color: white;
-}
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    color: white;
+  }
 
-.contact-form-section p {
-  margin-bottom: 15px;
-  color: white;
-  font-size: 1em;
-}
+  p {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1em;
+  }
 
-.contact-form-section label {
-  display: block;
-  margin: 15px 0 5px;
-  color: white;
-  font-weight: bold;
+  label {
+    display: block;
+    margin: 15px 0 5px;
+    color: white;
+    font-weight: bold;
+  }
+
+
 }
 
 .contact-form {
@@ -173,6 +185,7 @@ img {
   display: block;
   gap: 15px;
 }
+
 
 .us-section {
   h2 {
@@ -222,12 +235,12 @@ img {
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   padding: 10px;
-}
 
-.background-text h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.8em;
-  margin: 0;
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    margin: 0;
+  }
 }
 
 $font-primary: 'Montserrat', sans-serif;
@@ -237,24 +250,25 @@ $color-white: #ffffff;
 .products-section {
   text-align: center;
   margin-bottom: 20px;
-}
 
-.products-section h2 {
-  font-family: $font-primary;
-  font-size: 2.2em;
-  font-weight: 700;
-  color: $color-white;
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
 
-.products-section p {
-  font-family: $font-secondary;
-  margin-bottom: 1.3em;
-  color: $color-white;
-  text-align: center;
-  font-size: 25px;
+  h2 {
+    font-family: $font-primary;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: $color-white;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-family: $font-secondary;
+    margin-bottom: 1.3em;
+    color: $color-white;
+    text-align: center;
+    font-size: 25px;
+  }
 }
 
 .productsimage-section {
@@ -262,30 +276,30 @@ $color-white: #ffffff;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
-}
 
-.tag {
-  text-align: center;
-  flex: 1 1 20%;
-  max-width: 20%;
-  margin-bottom: 1rem;
-}
+  .tag {
+    text-align: center;
+    flex: 1 1 20%;
+    max-width: 20%;
+    margin-bottom: 1rem;
 
-.tag figure {
-  margin: 0;
-}
+    figure {
+      margin: 0;
+    }
 
-.tag img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
 
-.tag figcaption {
-  word-wrap: break-word;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: white;
+    figcaption {
+      word-wrap: break-word;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: white;
+    }
+  }
 }
 
 body {
@@ -329,5 +343,3 @@ p {
 .text-center p {
   margin-bottom: 40px;
 }
-
-

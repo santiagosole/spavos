@@ -387,6 +387,9 @@ header nav a:hover {
   display: inline-block;
   margin-top: 20px;
 }
+.contact-button:hover {
+  background-color: goldenrod;
+}
 
 #footer-whatsapp {
   position: fixed;
@@ -471,8 +474,7 @@ logos {
   padding: 20px;
   text-align: center;
 }
-
-img {
+logos img {
   width: 150px;
   margin: 0 20px;
   transition: width 0.3s ease;
@@ -486,20 +488,17 @@ img {
   margin-bottom: 40px;
   text-align: center;
 }
-
 .contact-form-section h2 {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 30px;
   font-size: 1.8em;
   color: white;
 }
-
 .contact-form-section p {
   margin-bottom: 15px;
   color: white;
   font-size: 1em;
 }
-
 .contact-form-section label {
   display: block;
   margin: 15px 0 5px;
@@ -560,7 +559,6 @@ img {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   padding: 10px;
 }
-
 .background-text h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.8em;
@@ -571,7 +569,6 @@ img {
   text-align: center;
   margin-bottom: 20px;
 }
-
 .products-section h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 2.2em;
@@ -581,7 +578,6 @@ img {
   margin-top: 40px;
   margin-bottom: 20px;
 }
-
 .products-section p {
   font-family: "Roboto", "Lora", sans-serif;
   margin-bottom: 1.3em;
@@ -596,25 +592,21 @@ img {
   justify-content: space-between;
   gap: 1rem;
 }
-
-.tag {
+.productsimage-section .tag {
   text-align: center;
   flex: 1 1 20%;
   max-width: 20%;
   margin-bottom: 1rem;
 }
-
-.tag figure {
+.productsimage-section .tag figure {
   margin: 0;
 }
-
-.tag img {
+.productsimage-section .tag img {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
-
-.tag figcaption {
+.productsimage-section .tag figcaption {
   word-wrap: break-word;
   margin-top: 0.5rem;
   font-size: 0.9rem;
@@ -717,65 +709,56 @@ footer.site-footer .footer-social-media #footer-whatsapp {
   width: 50px;
 }
 
-@media screen and (max-width: 941px) {
-  header {
-    height: 350px;
-    padding: 15px;
+@media (max-width: 941px) {
+  .header-logo img {
+    width: 150px;
+    height: auto;
   }
-  h1 {
-    font-size: 1.6em;
+  .header-text {
+    font-size: 1.5em;
   }
-  .logo img {
-    max-width: 90px;
-  }
-  nav a {
-    font-size: 1em;
-  }
-}
-@media screen and (max-width: 768px) {
-  header {
-    height: 300px;
-  }
-  h1 {
-    font-size: 1.4em;
-  }
-  .logo img {
-    max-width: 80px;
-  }
-  nav a {
-    font-size: 0.9em;
-  }
-}
-@media screen and (max-width: 480px) {
-  header {
-    height: 250px;
-  }
-  h1 {
-    font-size: 1.2em;
-  }
-  .logo img {
-    max-width: 70px;
-  }
-  nav {
-    margin: 10px 0;
-  }
-  nav a {
-    font-size: 0.8em;
-  }
-}
-@media screen and (max-width: 360px) {
-  header {
-    height: 200px;
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
   }
-  h1 {
+  .header-buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .header-nav li {
+    padding: 8px 0;
+    text-align: center;
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 360px) {
+  .header-logo img {
+    width: 120px;
+  }
+  .header-text {
+    font-size: 1.2em;
+  }
+  .header-container {
+    padding: 5px;
+  }
+  .header-buttons {
+    margin-top: 5px;
+  }
+  .header-nav li {
     font-size: 1em;
-  }
-  .logo img {
-    max-width: 60px;
-  }
-  nav a {
-    font-size: 0.7em;
+    padding: 6px 0;
   }
 }
 @media screen and (max-width: 941px) {
