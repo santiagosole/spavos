@@ -1,56 +1,51 @@
-
 .background-section {
   background-image: url('../img/spa-hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 100vh; /* Asegura que ocupe toda la pantalla */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 20px;
+  padding: 0;
+  margin: 0;
   position: relative;
-
-  .text-background {
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 90%; /* Evita que el texto se salga de la imagen */
-    z-index: 2; /* Asegura que el texto esté sobre la imagen */
-    box-sizing: border-box; /* Asegura que el padding no rompa el layout */
-    
-    h2 {
-      font-size: 2.5em;
-      margin: 20px 0 10px;
-      color: white;
-    }
-
-    p {
-      font-size: 1.2em;
-      margin: 0 20px;
-      color: white;
-    }
-
-    .contact-button {
-      background-color: goldenrod;
-      color: white;
-      font-size: 1.2em;
-      padding: 12px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-
-      &:hover {
-        background-color: goldenrod;
-      }
-    }
-  }
 }
 
+.text-background {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.text-background h2 {
+  font-size: 2.5em;
+  margin: 20px 0 10px;
+  color: white;
+}
+
+.text-background p {
+  font-size: 1.2em;
+  margin: 0 20px;
+  color: white;
+}
+
+.contact-button {
+  background-color: goldenrod;
+  color: white;
+  font-size: 1.2em;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
 
 #footer-whatsapp {
   position: fixed;
@@ -60,40 +55,40 @@
   border-radius: 50%;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
 
-  img {
-    width: 50px;
-    height: 50px;
-  }
+#footer-whatsapp img {
+  width: 50px;
+  height: 50px;
 }
 
 .tags-section {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 0;
+  padding: 0;
+}
 
-  .tag {
-    flex: 1;
-    margin: 10px;
-    text-align: center;
+.tag {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+}
 
-    img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      border-radius: 10px;
-    }
+.tag img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
-    h3 {
-      color: #FFFFFF;
-      font-family: 'Montserrat', sans-serif;
-      margin-top: 10px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.5em;
-      font-weight: 700;
-    }
-  }
+.tag h3 {
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
 }
 
 .new-products-section {
@@ -101,44 +96,45 @@
   position: relative;
   height: 300px;
   overflow: hidden;
-
-  .products-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    max-height: 300px;
-  }
-
-  .text-background {
-    position: absolute;
-    font-family: 'Montserrat', sans-serif;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #FFFFFF;
-    padding: 20px;
-    z-index: 1;
-  }
-
-  h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8em;
-    color: #FFFFFF;
-  }
+  margin: 0;
+  padding: 0;
 }
 
- 
+.products-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-height: 300px;
+}
+
+.text-background {
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #FFFFFF;
+  padding: 20px;
+  z-index: 1;
+}
+
+.new-products-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8em;
+  color: #FFFFFF;
+}
+
 logos {
   padding: 20px;
   text-align: center;
+}
 
-  img {
-    width: 150px;
-    margin: 0 20px;
-    transition: width 0.3s ease;
-  }
+img {
+  width: 150px;
+  margin: 0 20px;
+  transition: width 0.3s ease;
 }
 
 .contact-form-section {
@@ -148,28 +144,26 @@ logos {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
   text-align: center;
+}
 
-  h2 {
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 30px;
-    font-size: 1.8em;
-    color: white;
-  }
+.contact-form-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+  color: white;
+}
 
-  p {
-    margin-bottom: 15px;
-    color: white;
-    font-size: 1em;
-  }
+.contact-form-section p {
+  margin-bottom: 15px;
+  color: white;
+  font-size: 1em;
+}
 
-  label {
-    display: block;
-    margin: 15px 0 5px;
-    color: white;
-    font-weight: bold;
-  }
-
-
+.contact-form-section label {
+  display: block;
+  margin: 15px 0 5px;
+  color: white;
+  font-weight: bold;
 }
 
 .contact-form {
@@ -179,7 +173,6 @@ logos {
   display: block;
   gap: 15px;
 }
-
 
 .us-section {
   h2 {
@@ -229,12 +222,12 @@ logos {
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   padding: 10px;
+}
 
-  h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8em;
-    margin: 0;
-  }
+.background-text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8em;
+  margin: 0;
 }
 
 $font-primary: 'Montserrat', sans-serif;
@@ -244,56 +237,55 @@ $color-white: #ffffff;
 .products-section {
   text-align: center;
   margin-bottom: 20px;
+}
 
+.products-section h2 {
+  font-family: $font-primary;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: $color-white;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
 
-  h2 {
-    font-family: $font-primary;
-    font-size: 2.2em;
-    font-weight: 700;
-    color: $color-white;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-
-  p {
-    font-family: $font-secondary;
-    margin-bottom: 1.3em;
-    color: $color-white;
-    text-align: center;
-    font-size: 25px;
-  }
+.products-section p {
+  font-family: $font-secondary;
+  margin-bottom: 1.3em;
+  color: $color-white;
+  text-align: center;
+  font-size: 25px;
 }
 
 .productsimage-section {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between; 
-  gap: 1rem; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
-  .tag {
-    text-align: center; 
-    flex: 1 1 20%; 
-    max-width: 20%;
-    margin-bottom: 1rem; 
+.tag {
+  text-align: center;
+  flex: 1 1 20%;
+  max-width: 20%;
+  margin-bottom: 1rem;
+}
 
-    figure {
-      margin: 0;
-    }
+.tag figure {
+  margin: 0;
+}
 
-    img {
-      width: 100%; 
-      height: auto; 
-      border-radius: 8px; 
-    }
+.tag img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 
-    figcaption {
-      word-wrap: break-word; /* Evita que las palabras largas se desborden */
-      margin-top: 0.5rem; 
-      font-size: 0.9rem; 
-      color: white; 
-    }
-  }
+.tag figcaption {
+  word-wrap: break-word;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: white;
 }
 
 body {
@@ -302,21 +294,19 @@ body {
   color: #ffffff;
 }
 
-/* Título y párrafo */
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.5rem; /* Hacemos el h2 un poco más pequeño */
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 p {
-  font-size: 1.5rem; /* Agrandamos el párrafo */
+  font-size: 1.5rem;
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
-/* Carrusel */
 .carousel-item {
   .row {
     display: flex;
@@ -328,17 +318,16 @@ p {
   }
 }
 
-/* Estilo de las imágenes en el carrusel */
 .custom-img {
   width: 100%;
   height: auto;
-  max-height: 250px; /* Definir una altura máxima para las imágenes */
-  object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+  max-height: 250px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
-/* Espaciado entre párrafo y las imágenes */
 .text-center p {
-  margin-bottom: 40px; /* Aumentamos el espacio entre el párrafo y las imágenes */
+  margin-bottom: 40px;
 }
+
 

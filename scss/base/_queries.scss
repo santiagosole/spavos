@@ -1,53 +1,80 @@
-
-
-// Media Query para pantallas con ancho máximo de 941px
-@media (max-width: 941px) {
+@media screen and (max-width: 941px) {
   header {
+    height: 350px;
     padding: 15px;
   }
 
-  .logo img {
-    max-width: 120px;  // Ajustar tamaño del logo
-  }
-
   h1 {
-    font-size: 2em;  // Reducir tamaño del título
+    font-size: 1.6em;
   }
 
-  nav {
-    margin: 15px 0;
-    
-    a {
-      font-size: 1em;  // Reducir tamaño de los enlaces
-      margin: 0 15px;  // Reducir espacio entre los enlaces
-    }
+  .logo img {
+    max-width: 90px;
+  }
+
+  nav a {
+    font-size: 1em;
   }
 }
 
-// Media Query para pantallas con ancho máximo de 360px
-@media (max-width: 360px) {
+@media screen and (max-width: 768px) {
   header {
-    padding: 10px;
-  }
-
-  .logo img {
-    max-width: 100px;  // Ajustar tamaño del logo
+    height: 300px;
   }
 
   h1 {
-    font-size: 1.5em;  // Reducir tamaño del título
+    font-size: 1.4em;
+  }
+
+  .logo img {
+    max-width: 80px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    height: 250px;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  .logo img {
+    max-width: 70px;
   }
 
   nav {
     margin: 10px 0;
-    
-    a {
-      font-size: 0.9em;  // Reducir tamaño de los enlaces
-      margin: 0 10px;  // Reducir espacio entre los enlaces
-    }
+  }
+
+  nav a {
+    font-size: 0.8em;
   }
 }
 
+@media screen and (max-width: 360px) {
+  header {
+    height: 200px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1em;
+  }
+
+  .logo img {
+    max-width: 60px;
+  }
+
+  nav a {
+    font-size: 0.7em;
+  }
+}
 
 @media screen and (max-width: 941px) {
   .background-section {
@@ -56,7 +83,7 @@
 
   .text-background {
     padding: 15px;
-    max-width: 90%; /* Evita que el texto se salga de la imagen */
+    max-width: 90%;
     font-size: 1.1em;
   }
 
@@ -77,7 +104,7 @@
 
   .tag {
     margin: 10px 0;
-    width: 80%;  // Reducir el tamaño de las tarjetas
+    width: 80%;
   }
 
   .tag img {
@@ -87,7 +114,7 @@
 
   .text-background {
     padding: 10px;
-    max-width: 100%; // Ajustar para evitar desbordes
+    max-width: 100%;
   }
 
   .contact-button {
@@ -109,7 +136,7 @@
 
   .tag {
     margin: 10px 0;
-    width: 80%;  // Reducir el tamaño de las tarjetas
+    width: 80%;
   }
 
   .tag img {
@@ -123,7 +150,7 @@
 
   .text-background {
     padding: 10px;
-    max-width: 100%; // Ajustar para evitar desbordes
+    max-width: 100%;
   }
 
   .contact-button {
@@ -140,13 +167,13 @@
 @media screen and (max-width: 480px) {
   .background-section {
     padding: 10px;
-    height: 60vh; /* Ajusta la altura para pantallas pequeñas */
+    height: 60vh;
   }
 
   .text-background {
     padding: 10px;
     font-size: 0.9em;
-    max-width: 100%; /* Hace que el texto ocupe todo el ancho disponible */
+    max-width: 100%;
   }
 
   .tags-section {
@@ -159,7 +186,7 @@
     margin: 10px 0;
     width: 100%;
     text-align: center;
-    font-size: 0.8em; /* Reducir el tamaño de la fuente en las tarjetas */
+    font-size: 0.8em;
   }
 
   .tag img {
@@ -186,13 +213,13 @@
 @media screen and (max-width: 360px) {
   .background-section {
     padding: 10px;
-    height: 50vh; /* Reduce la altura aún más en pantallas pequeñas */
+    height: 50vh;
   }
 
   .text-background {
     padding: 8px;
     font-size: 0.8em;
-    max-width: 100%; /* Asegura que el texto no se salga */
+    max-width: 100%;
   }
 
   .contact-button {
@@ -206,7 +233,7 @@
   }
 
   .text-background h2 {
-    font-size: 1.2em; /* Ajusta aún más el tamaño del título */
+    font-size: 1.2em;
   }
 
   .tags-section {
@@ -219,7 +246,7 @@
     margin: 10px 0;
     width: 100%;
     text-align: center;
-    font-size: 0.7em; /* Reducir aún más el tamaño de la fuente en las tarjetas */
+    font-size: 0.7em;
   }
 
   .tag img {
@@ -228,8 +255,6 @@
   }
 }
 
-
-
 @media (max-width: 941px) and (min-width: 361px) {
   .logos img {
     width: 120px;
@@ -237,24 +262,24 @@
 
   .contact-form-section {
     padding: 20px;
+  }
 
-    h2 {
-      font-size: 1.5em;
-    }
+  .contact-form-section h2 {
+    font-size: 1.5em;
+  }
 
-    p,
-    label {
-      font-size: 0.9em;
-    }
+  .contact-form-section p,
+  .contact-form-section label {
+    font-size: 0.9em;
+  }
 
-    input,
-    textarea {
-      font-size: 0.9em;
-    }
+  .contact-form-section input,
+  .contact-form-section textarea {
+    font-size: 0.9em;
+  }
 
-    button {
-      font-size: 0.9em;
-    }
+  .contact-form-section button {
+    font-size: 0.9em;
   }
 
   .contact-form {
@@ -420,37 +445,32 @@
   }
 }
 
-
 @media (max-width: 360px) {
   .productsimage-section {
-    justify-content: center; /* Centrar los items */
+    justify-content: center;
   }
 
   .tag {
-    flex: 1 1 45%; /* Ajustar el ancho de los elementos */
-    max-width: 45%; /* Asegurar que no se expandan demasiado */
+    flex: 1 1 45%;
+    max-width: 45%;
     display: flex;
-    flex-direction: column; /* Asegurar que imagen y texto estén en columna */
-    align-items: center; /* Centrar contenido dentro de cada .tag */
-    text-align: center; /* Asegurar que el texto esté centrado */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .tag img {
-    width: 100%; /* Hacer que las imágenes ocupen todo el espacio disponible */
-    height: auto; /* Mantener la proporción de las imágenes */
-    object-fit: cover; /* Asegurar que la imagen no se distorsione */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
   .tag figcaption {
-    font-size: 0.8rem; /* Ajustar el tamaño del texto */
-    margin-top: 0.5rem; /* Espaciado entre la imagen y el texto */
-    word-wrap: break-word; /* Evitar que el texto se desborde */
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    word-wrap: break-word;
   }
 }
-
-
-
-
 
 @media (max-width: 941px) and (min-width: 360px) {
   .services-section .row {
@@ -487,37 +507,37 @@
 
 @media (max-width: 941px) {
   footer.site-footer {
-    padding: 15px; // Reduce el padding para ajustarse mejor a pantallas más pequeñas
+    padding: 15px;
   }
 
   footer.site-footer .footer-map-links {
-    flex-direction: column; // Apila los mapas verticalmente
-    align-items: center; // Centra los mapas
-    gap: 15px; // Reduce el espacio entre los mapas
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
   footer.site-footer .footer-map-links .footer-map-item {
-    width: 90%; // Aumenta el ancho de los mapas para aprovechar mejor el espacio
+    width: 90%;
   }
 
   footer.site-footer .footer-social-media {
-    flex-direction: column; // Apila los logos y las redes sociales
-    align-items: center; // Centra todos los elementos
-    gap: 20px; // Agrega espacio entre los bloques
-    padding: 10px 0; // Reduce el padding lateral
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
   }
 
   footer.site-footer .footer-social-media .footer-logo-item {
-    width: 120px; // Ajusta el tamaño de los logos
+    width: 120px;
   }
 
   footer.site-footer .footer-social-media .footer-logo-item .footer-logo {
-    width: 120px; // Aumenta el tamaño del logo para mayor visibilidad
+    width: 120px;
   }
 
   footer.site-footer .footer-social-media .footer-social-links {
-    flex-direction: column; // Apila los enlaces sociales
-    gap: 10px; // Reduce el espacio entre los enlaces
+    flex-direction: column;
+    gap: 10px;
   }
 
   footer.site-footer .footer-social-media .footer-social-links .footer-social-item {
@@ -525,25 +545,25 @@
   }
 
   footer.site-footer #footer-whatsapp {
-    margin: 15px auto 0; // Centra el ícono de WhatsApp
-    width: 40px; // Ajusta el tamaño del ícono
+    margin: 15px auto 0;
+    width: 40px;
   }
 }
 
 @media (max-width: 360px) {
   footer.site-footer .footer-map-links .footer-map-item iframe {
-    height: 150px; // Reduce la altura de los mapas en pantallas muy pequeñas
+    height: 150px;
   }
 
   footer.site-footer .footer-social-media .footer-logo-item {
-    width: 100px; // Reduce aún más el tamaño de los logos
+    width: 100px;
   }
 
   footer.site-footer .footer-social-media .footer-logo-item .footer-logo {
-    width: 100px; // Ajusta proporcionalmente el tamaño
+    width: 100px;
   }
 
   footer.site-footer .footer-social-media .footer-social-links {
-    gap: 5px; // Reduce el espacio entre los enlaces sociales
+    gap: 5px;
   }
 }

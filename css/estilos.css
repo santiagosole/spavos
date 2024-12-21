@@ -1,4 +1,3 @@
-@charset "UTF-8";
 header {
   background-color: #000000;
   color: #FFFFFF;
@@ -6,24 +5,6 @@ header {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   border-bottom: 2px solid #FFA500;
-}
-header .funcionalidades {
-  padding: 1rem;
-  margin: 0;
-  list-style-type: disc;
-}
-header .funcionalidades li {
-  margin-bottom: 0.5rem;
-}
-header .funcionalidades li:last-child {
-  margin-bottom: 0;
-}
-header .funcionalidades li a {
-  text-decoration: none;
-  color: white;
-}
-header .funcionalidades li a:hover {
-  color: goldenrod;
 }
 header .logo img {
   max-width: 150px;
@@ -133,9 +114,8 @@ main {
 }
 .tags-section .tag img {
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px;
   object-fit: cover;
 }
 .tags-section .tag h3 {
@@ -151,11 +131,13 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
+  display: flex;
   justify-content: center;
   text-align: center;
-  padding: 40px 20px;
+  padding: 0;
+  margin: 0;
   position: relative;
 }
 .background-section .text-background {
@@ -287,20 +269,28 @@ textarea {
 
 body {
   font-family: "Montserrat", sans-serif;
-  text-align: center;
   background-color: #000000;
-  color: #FFFFFF;
+  color: black;
   line-height: 1.5;
   font-size: 16px;
-  margin-top: 50px;
-  margin-bottom: 30pxx;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 header {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
   justify-content: center;
-  padding: 20px;
+  text-align: center;
+  padding: 10px;
   background-image: url("../img/spavos-header.jfif");
   background-size: cover;
   background-position: center;
@@ -308,37 +298,41 @@ header {
   border-bottom: 2px solid #FFA500;
   position: relative;
   font-family: "Raleway", sans-serif;
-  margin-bottom: 0;
-}
-header nav ul li {
-  list-style-type: none;
+  margin: 0;
+  height: 400px;
+  box-sizing: border-box;
 }
 header .logo img {
-  display: block;
+  max-width: 100px;
   margin: 0 auto;
-  max-width: 150px;
-  z-index: 2;
-  position: relative;
+  display: block;
 }
 header h1 {
+  font-size: 1.8em;
+  padding: 8px;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
-  padding: 10px;
-  font-size: 2.5em;
   color: gold;
+  font-family: "Montserrat", sans-serif;
 }
 header nav {
   margin: 20px 0;
   text-align: center;
 }
+header nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+header nav li {
+  display: inline;
+  margin: 0 10px;
+}
 header nav a {
   font-family: "Montserrat", sans-serif;
-  display: inline-block;
-  margin: 0 20px;
+  font-size: 1.1em;
   text-decoration: none;
   color: #FFFFFF;
   font-weight: bold;
-  font-size: 1.2em;
 }
 header nav a:hover {
   color: gold;
@@ -351,34 +345,39 @@ header nav a:hover {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 100vh; /* Asegura que ocupe toda la pantalla */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 20px;
+  padding: 0;
+  margin: 0;
   position: relative;
 }
-.background-section .text-background {
+
+.text-background {
   font-family: "Montserrat", sans-serif;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
-  max-width: 90%; /* Evita que el texto se salga de la imagen */
-  z-index: 2; /* Asegura que el texto esté sobre la imagen */
-  box-sizing: border-box; /* Asegura que el padding no rompa el layout */
+  max-width: 90%;
+  z-index: 2;
+  box-sizing: border-box;
 }
-.background-section .text-background h2 {
+
+.text-background h2 {
   font-size: 2.5em;
   margin: 20px 0 10px;
   color: white;
 }
-.background-section .text-background p {
+
+.text-background p {
   font-size: 1.2em;
   margin: 0 20px;
   color: white;
 }
-.background-section .text-background .contact-button {
+
+.contact-button {
   background-color: goldenrod;
   color: white;
   font-size: 1.2em;
@@ -387,9 +386,6 @@ header nav a:hover {
   text-decoration: none;
   display: inline-block;
   margin-top: 20px;
-}
-.background-section .text-background .contact-button:hover {
-  background-color: goldenrod;
 }
 
 #footer-whatsapp {
@@ -401,6 +397,7 @@ header nav a:hover {
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
 #footer-whatsapp img {
   width: 50px;
   height: 50px;
@@ -410,20 +407,23 @@ header nav a:hover {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 0;
+  padding: 0;
 }
-.tags-section .tag {
+
+.tag {
   flex: 1;
   margin: 10px;
   text-align: center;
 }
-.tags-section .tag img {
+
+.tag img {
   width: 100%;
-  max-width: 400px;
   height: auto;
   border-radius: 10px;
 }
-.tags-section .tag h3 {
+
+.tag h3 {
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   margin-top: 10px;
@@ -437,15 +437,19 @@ header nav a:hover {
   position: relative;
   height: 300px;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
-.new-products-section .products-image {
+
+.products-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   max-height: 300px;
 }
-.new-products-section .text-background {
+
+.text-background {
   position: absolute;
   font-family: "Montserrat", sans-serif;
   top: 50%;
@@ -456,6 +460,7 @@ header nav a:hover {
   padding: 20px;
   z-index: 1;
 }
+
 .new-products-section h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.8em;
@@ -466,7 +471,8 @@ logos {
   padding: 20px;
   text-align: center;
 }
-logos img {
+
+img {
   width: 150px;
   margin: 0 20px;
   transition: width 0.3s ease;
@@ -480,17 +486,20 @@ logos img {
   margin-bottom: 40px;
   text-align: center;
 }
+
 .contact-form-section h2 {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 30px;
   font-size: 1.8em;
   color: white;
 }
+
 .contact-form-section p {
   margin-bottom: 15px;
   color: white;
   font-size: 1em;
 }
+
 .contact-form-section label {
   display: block;
   margin: 15px 0 5px;
@@ -551,6 +560,7 @@ logos img {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   padding: 10px;
 }
+
 .background-text h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.8em;
@@ -561,6 +571,7 @@ logos img {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .products-section h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 2.2em;
@@ -570,6 +581,7 @@ logos img {
   margin-top: 40px;
   margin-bottom: 20px;
 }
+
 .products-section p {
   font-family: "Roboto", "Lora", sans-serif;
   margin-bottom: 1.3em;
@@ -584,22 +596,26 @@ logos img {
   justify-content: space-between;
   gap: 1rem;
 }
-.productsimage-section .tag {
+
+.tag {
   text-align: center;
   flex: 1 1 20%;
   max-width: 20%;
   margin-bottom: 1rem;
 }
-.productsimage-section .tag figure {
+
+.tag figure {
   margin: 0;
 }
-.productsimage-section .tag img {
+
+.tag img {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
-.productsimage-section .tag figcaption {
-  word-wrap: break-word; /* Evita que las palabras largas se desborden */
+
+.tag figcaption {
+  word-wrap: break-word;
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: white;
@@ -611,21 +627,19 @@ body {
   color: #ffffff;
 }
 
-/* Título y párrafo */
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.5rem; /* Hacemos el h2 un poco más pequeño */
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 p {
-  font-size: 1.5rem; /* Agrandamos el párrafo */
+  font-size: 1.5rem;
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
-/* Carrusel */
 .carousel-item .row {
   display: flex;
   justify-content: space-between;
@@ -634,18 +648,16 @@ p {
   padding: 15px;
 }
 
-/* Estilo de las imágenes en el carrusel */
 .custom-img {
   width: 100%;
   height: auto;
-  max-height: 250px; /* Definir una altura máxima para las imágenes */
-  object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+  max-height: 250px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
-/* Espaciado entre párrafo y las imágenes */
 .text-center p {
-  margin-bottom: 40px; /* Aumentamos el espacio entre el párrafo y las imágenes */
+  margin-bottom: 40px;
 }
 
 footer.site-footer {
@@ -705,40 +717,65 @@ footer.site-footer .footer-social-media #footer-whatsapp {
   width: 50px;
 }
 
-@media (max-width: 941px) {
+@media screen and (max-width: 941px) {
   header {
+    height: 350px;
     padding: 15px;
   }
-  .logo img {
-    max-width: 120px;
-  }
   h1 {
-    font-size: 2em;
+    font-size: 1.6em;
   }
-  nav {
-    margin: 15px 0;
+  .logo img {
+    max-width: 90px;
   }
   nav a {
     font-size: 1em;
-    margin: 0 15px;
   }
 }
-@media (max-width: 360px) {
+@media screen and (max-width: 768px) {
   header {
-    padding: 10px;
-  }
-  .logo img {
-    max-width: 100px;
+    height: 300px;
   }
   h1 {
-    font-size: 1.5em;
+    font-size: 1.4em;
+  }
+  .logo img {
+    max-width: 80px;
+  }
+  nav a {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    height: 250px;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  .logo img {
+    max-width: 70px;
   }
   nav {
     margin: 10px 0;
   }
   nav a {
-    font-size: 0.9em;
-    margin: 0 10px;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 360px) {
+  header {
+    height: 200px;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  .logo img {
+    max-width: 60px;
+  }
+  nav a {
+    font-size: 0.7em;
   }
 }
 @media screen and (max-width: 941px) {
@@ -747,7 +784,7 @@ footer.site-footer .footer-social-media #footer-whatsapp {
   }
   .text-background {
     padding: 15px;
-    max-width: 90%; /* Evita que el texto se salga de la imagen */
+    max-width: 90%;
     font-size: 1.1em;
   }
   .contact-button {
@@ -815,12 +852,12 @@ footer.site-footer .footer-social-media #footer-whatsapp {
 @media screen and (max-width: 480px) {
   .background-section {
     padding: 10px;
-    height: 60vh; /* Ajusta la altura para pantallas pequeñas */
+    height: 60vh;
   }
   .text-background {
     padding: 10px;
     font-size: 0.9em;
-    max-width: 100%; /* Hace que el texto ocupe todo el ancho disponible */
+    max-width: 100%;
   }
   .tags-section {
     flex-direction: column;
@@ -831,7 +868,7 @@ footer.site-footer .footer-social-media #footer-whatsapp {
     margin: 10px 0;
     width: 100%;
     text-align: center;
-    font-size: 0.8em; /* Reducir el tamaño de la fuente en las tarjetas */
+    font-size: 0.8em;
   }
   .tag img {
     max-width: 100%;
@@ -853,12 +890,12 @@ footer.site-footer .footer-social-media #footer-whatsapp {
 @media screen and (max-width: 360px) {
   .background-section {
     padding: 10px;
-    height: 50vh; /* Reduce la altura aún más en pantallas pequeñas */
+    height: 50vh;
   }
   .text-background {
     padding: 8px;
     font-size: 0.8em;
-    max-width: 100%; /* Asegura que el texto no se salga */
+    max-width: 100%;
   }
   .contact-button {
     font-size: 0.9em;
@@ -869,7 +906,7 @@ footer.site-footer .footer-social-media #footer-whatsapp {
     padding: 10px;
   }
   .text-background h2 {
-    font-size: 1.2em; /* Ajusta aún más el tamaño del título */
+    font-size: 1.2em;
   }
   .tags-section {
     flex-direction: column;
@@ -880,7 +917,7 @@ footer.site-footer .footer-social-media #footer-whatsapp {
     margin: 10px 0;
     width: 100%;
     text-align: center;
-    font-size: 0.7em; /* Reducir aún más el tamaño de la fuente en las tarjetas */
+    font-size: 0.7em;
   }
   .tag img {
     max-width: 100%;
@@ -1027,25 +1064,25 @@ footer.site-footer .footer-social-media #footer-whatsapp {
 }
 @media (max-width: 360px) {
   .productsimage-section {
-    justify-content: center; /* Centrar los items */
+    justify-content: center;
   }
   .tag {
-    flex: 1 1 45%; /* Ajustar el ancho de los elementos */
-    max-width: 45%; /* Asegurar que no se expandan demasiado */
+    flex: 1 1 45%;
+    max-width: 45%;
     display: flex;
-    flex-direction: column; /* Asegurar que imagen y texto estén en columna */
-    align-items: center; /* Centrar contenido dentro de cada .tag */
-    text-align: center; /* Asegurar que el texto esté centrado */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   .tag img {
-    width: 100%; /* Hacer que las imágenes ocupen todo el espacio disponible */
-    height: auto; /* Mantener la proporción de las imágenes */
-    object-fit: cover; /* Asegurar que la imagen no se distorsione */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
   .tag figcaption {
-    font-size: 0.8rem; /* Ajustar el tamaño del texto */
-    margin-top: 0.5rem; /* Espaciado entre la imagen y el texto */
-    word-wrap: break-word; /* Evitar que el texto se desborde */
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    word-wrap: break-word;
   }
 }
 @media (max-width: 941px) and (min-width: 360px) {

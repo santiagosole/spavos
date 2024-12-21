@@ -15,7 +15,6 @@ $font-base: 'Montserrat', sans-serif;
   color: $color;
 }
 
-
 header {
   background-color: $color-fondo-header;
   color: $color-texto;
@@ -23,31 +22,6 @@ header {
   font-family: $font-base;
   text-align: center;
   border-bottom: 2px solid $color-dorado;
-
-
-.funcionalidades {
-  padding: 1rem;
-  margin: 0;
-  list-style-type: disc;
-
-  li {
-    margin-bottom: 0.5rem;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-
-      &:hover {
-        color: goldenrod ;
-      }
-    }
-  }
-}
-
 
   .logo img {
     max-width: 150px;
@@ -67,7 +41,6 @@ footer.site-footer {
   padding: $padding-base;
   border-top: 4px solid $color-dorado;
   border-bottom: 4px solid $color-dorado;
-
 
   @include borde-redondeado(10px);
 
@@ -158,10 +131,8 @@ main {
   text-decoration: none;
   display: inline-block;
 
-
   @include borde-redondeado(5px);
 }
-
 
 .tags-section {
   display: flex;
@@ -176,10 +147,9 @@ main {
 
     img {
       width: 100%;
-      max-width: 400px;
+      max-width: 100%; 
       height: auto;
-      border-radius: 10px;
-      object-fit: cover;
+      object-fit: cover; 
     }
 
     h3 {
@@ -197,11 +167,13 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; 
   align-items: center;
+  display: flex;
   justify-content: center;
   text-align: center;
-  padding: 40px 20px;
+  padding: 0;
+  margin: 0;
   position: relative;
 
   .text-background {
@@ -223,7 +195,6 @@ main {
     }
   }
 }
-
 
 %focus-style {
   border-color: goldenrod;
@@ -268,8 +239,6 @@ button {
   @extend %button-style;
 }
 
-
-
 @keyframes blur-in {
   0% {
     filter: blur(10px);
@@ -299,7 +268,6 @@ button {
     opacity: 0.7;
   }
 }
-
 
 $primary-color: white;
 $secondary-color: gold;
@@ -331,7 +299,6 @@ $font-size-h3: 1.5em;
     transform: scale(1.05);
   }
 }
-
 
 .tag {
   background-color: $bg-color;
